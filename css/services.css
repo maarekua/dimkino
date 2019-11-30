@@ -33,6 +33,10 @@ nav li a:hover {
     background-color: #DF841A;
 }
 
+nav li .fas {
+    font-size: 24px;
+}
+
 .fas, .fab {
     font-size: 32px;
     color: #f6f6f6;
