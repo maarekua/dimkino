@@ -3,41 +3,10 @@ body {
     color: #f6f6f6;
 }
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-header {
-    display: flex;
-    justify-content:space-between;
-}
-
 #logo img {
     height: 55px;
 }
 
 nav li {
     display: inline-block;
-}
-
-nav li a {
-    color: #f6f6f6;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 16px 10px;
-    transition: background-color .4s;
-}
-
-nav li a:hover {
-    background-color: #DF841A;
-}
-
-nav li .fas {
-    font-size: 24px;
-}
-
-.fas, .fab {
-    font-size: 32px;
-    color: #f6f6f6;
 }
