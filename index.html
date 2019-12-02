@@ -7,35 +7,25 @@
         <title>ДімКіно - Домашній кінотеатр, HIFI та HIEND аудіосистеми</title>
         <link rel="stylesheet" href="css/index.css">
         <link rel="icon" href="images/picon.png">
+        <script src="js/menu-toggle.js"></script>
         <script src="https://kit.fontawesome.com/68324b0018.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
-            <div id="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="ДімКіно - Домашній кінотеатр, HIFI та HIEND аудіосистеми">
-                </a>
-            </div>
+             <span class="menu-toggle" id="js-navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </span>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="ДімКіно - Домашній кінотеатр, HIFI та HIEND аудіосистеми">
+            </a>
             <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">Головна</a>
-                    </li>
-                    <li>
-                        <a href="portfolio.html">Портфоліо</a>
-                    </li>
-                    <li>
-                        <a href="services.html">Послуги</a>
-                    </li>
-                    <li>
-                        <a href="shop.html">Магазин</a>
-                    </li>
-                    <li>
-                        <a href="contacts.html">Контакти</a>
-                    </li>
-                    <li>
-                        <a href="shopping-cart.html"><i class="fas fa-shopping-cart"></i></a>
-                    </li>
+                <ul class="menu" id="js-menu">
+                    <li><a class="menu-item" href="index.html">Головна</a></li>
+                    <li><a class="menu-item" href="portfolio.html">Портфоліо</a></li>
+                    <li><a class="menu-item" href="services.html">Послуги</a></li>
+                    <li><a class="menu-item" href="shop.html">Магазин</a></li>
+                    <li><a class="menu-item" href="contacts.html">Контакти</a></li>
+                    <li><a class="menu-item" href="shopping-cart.html"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
             </nav>
         </header>
