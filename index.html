@@ -7,18 +7,17 @@
         <title>ДімКіно - Домашній кінотеатр, HIFI та HIEND аудіосистеми</title>
         <link rel="stylesheet" href="css/index.css">
         <link rel="icon" href="images/picon.png">
-        <script src="js/menu-toggle.js"></script>
         <script src="https://kit.fontawesome.com/68324b0018.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
-             <span class="menu-toggle" id="js-navbar-toggle">
-                <i class="fas fa-bars"></i>
-            </span>
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="ДімКіно - Домашній кінотеатр, HIFI та HIEND аудіосистеми">
-            </a>
             <nav>
+                <span class="menu-toggle" id="js-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </span>
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="ДімКіно - Домашній кінотеатр, HIFI та HIEND аудіосистеми">
+                </a>
                 <ul class="menu" id="js-menu">
                     <li><a class="menu-item" href="index.html">Головна</a></li>
                     <li><a class="menu-item" href="portfolio.html">Портфоліо</a></li>
@@ -30,11 +29,12 @@
             </nav>
         </header>
         <main>
-            <section>
+            <section class="banner">
                 <h1>
                     Домашні кінотеатри.<br>
                     HIFI та HIEND аудіосистеми.            
                 </h1>
+                <button>Магазин</button>
             </section>
             <section>
                 <h2>Про Нас</h2>
@@ -177,5 +177,6 @@
             </ul>
             <p>© 2019 Markiyan</p>
         </footer>
+        <script src="js/menu-toggle.js"></script>
     </body>
 </html>

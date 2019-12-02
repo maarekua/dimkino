@@ -6,20 +6,32 @@
     --text-color: #f6f6f6;
 }
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background-color: var(--main-color);
     color: var(--text-color);
+    max-width: 980px;
+    margin: auto;
+}
+
+header {
+    position: fixed;
 }
 
 header .logo img {
     display: inline-block;
     height: 55px;
+    margin: 5px;
 }
 
 .menu {
     display: none;
     list-style: none;
-    background-color: grey;
 }
 
 header nav .menu li {
@@ -48,7 +60,45 @@ header .menu-toggle {
     font-size: 24px;
 }
 
-
+@media screen and (min-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+    header nav .menu {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    header nav .menu li {
+        margin: 0;
+    }
+    header nav .menu .menu-item {
+        margin-left: 40px;
+    }
+    .logo {
+        margin-top: 0;
+    }
+   .menu-toggle {
+       display: none;
+    }
+}
 .active {
     display: block;
+}
+
+.banner {
+    background-image: url('../images/sonusfabe-ilcremonese.jpg');
+    background-position: right;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
 }
