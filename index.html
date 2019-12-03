@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>ДімКіно - Домашній кінотеатр, HIFI та HIEND аудіосистеми</title>
+        <link rel="stylesheet" href="css/navmenu.css">
         <link rel="stylesheet" href="css/index.css">
         <link rel="icon" href="images/picon.png">
         <script src="https://kit.fontawesome.com/68324b0018.js" crossorigin="anonymous"></script>
@@ -12,31 +13,31 @@
     <body>
         <header>
             <nav>
-                <span class="menu-toggle" id="js-menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </span>
-                <a href="index.html" class="logo">
-                    <img src="images/logo.png" alt="ДімКіно - Домашній кінотеатр, HIFI та HIEND аудіосистеми">
+                <a href="index.html">
+                    <img class="logo" src="images/logo.png" alt="ДімКіно - Домашній кінотеатр, HIFI та HIEND аудіосистеми">
                 </a>
-                <ul class="menu" id="js-menu">
-                    <li><a class="menu-item" href="index.html">Головна</a></li>
-                    <li><a class="menu-item" href="portfolio.html">Портфоліо</a></li>
-                    <li><a class="menu-item" href="services.html">Послуги</a></li>
-                    <li><a class="menu-item" href="shop.html">Магазин</a></li>
-                    <li><a class="menu-item" href="contacts.html">Контакти</a></li>
-                    <li><a class="menu-item" href="shopping-cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                <ul class="menu">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="portfolio.html">Портфоліо</a></li>
+                    <li><a href="services.html">Послуги</a></li>
+                    <li><a href="shop.html">Магазин</a></li>
+                    <li><a href="contacts.html">Контакти</a></li>
+                    <li><a href="shopping-cart.html"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
             </nav>
         </header>
+        <div class="clear"></div>
         <main>
             <section class="banner">
                 <h1>
                     Домашні кінотеатри.<br>
                     HIFI та HIEND аудіосистеми.            
                 </h1>
-                <button>Магазин</button>
+                <a href="shop.html" class="button">Перейти в Магазин</a>
             </section>
-            <section>
+            <section class="about">
                 <h2>Про Нас</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, 
             vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac 
@@ -48,7 +49,7 @@
             pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet 
             orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada 
             quis ornare accumsan, blandit sed diam.</p>
-                <i class="fas fa-chevron-left"></i>
+                </section><!--<i class="fas fa-chevron-left"></i>
                 <div class="carousel">
                     <img src="images/carousel/denon-monitor.jpg" alt="Стереокомплект Denon - Monitor Audio">
                     <img src="images/carousel/mc-cremonese.jpg" alt="Стереокомплект McIntosh - Sonus Faber Il Cremonese">
@@ -176,7 +177,6 @@
                 </li>
             </ul>
             <p>© 2019 Markiyan</p>
-        </footer>
-        <script src="js/menu-toggle.js"></script>
+        </footer>-->
     </body>
 </html>

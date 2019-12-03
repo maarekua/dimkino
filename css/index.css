@@ -3,13 +3,7 @@
 :root {
     font-family: 'Oswald', sans-serif;
     --main-color: #30332E;
-    --text-color: #f6f6f6;
-}
-
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    --text-color: #E2E2E2;
 }
 
 body {
@@ -17,88 +11,70 @@ body {
     color: var(--text-color);
     max-width: 980px;
     margin: auto;
-}
-
-header {
-    position: fixed;
-}
-
-header .logo img {
-    display: inline-block;
-    height: 55px;
-    margin: 5px;
-}
-
-.menu {
-    display: none;
-    list-style: none;
-}
-
-header nav .menu li {
-    text-align: center;
-    padding: 20px 0;
-}
-
-header nav .menu .menu-item {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--text-color);
-    padding: 15px 8px;
-    transition: background-color 0.25s;
-}
-
-header nav .menu .menu-item:hover {
-    background-color: orange;
-}
-
-header .menu-toggle {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer; 
-    color: var(--text-color);
-    font-size: 24px;
-}
-
-@media screen and (min-width: 768px) {
-    nav {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 0;
-        height: 70px;
-        align-items: center;
-    }
-    header nav .menu {
-        display: flex;
-        margin-right: 30px;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-    header nav .menu li {
-        margin: 0;
-    }
-    header nav .menu .menu-item {
-        margin-left: 40px;
-    }
-    .logo {
-        margin-top: 0;
-    }
-   .menu-toggle {
-       display: none;
-    }
-}
-.active {
-    display: block;
+    box-shadow: 0 0 10px #111;
+    overflow: hidden;
 }
 
 .banner {
     background-image: url('../images/sonusfabe-ilcremonese.jpg');
     background-position: right;
     background-size: cover;
-    height: 600px;
+    min-height: 450px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     
+}
+
+.banner h1 {
+    margin-left: 1rem;
+    font-family: 'Poiret One', cursive;
+    font-size: 3rem;
+}
+
+.banner .button {
+    align-self: center;
+}
+
+@media (min-width: 48em) {
+    .banner {
+        min-height: 600px;
+    }
+}
+
+.button {
+    margin: 5px;
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: var(--text-color);
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: background 0.45s;
+    background-color: rgba(48, 51, 46, 0.8)
+}
+
+.button:hover {
+    background-color: #bd632f;
+}
+
+
+.about {
+    text-align: center;
+}
+.about h2 {
+    font-family: 'Poiret One', cursive;
+    font-size: 1.7rem;
+}
+
+.about h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: var(--text-color);
+    margin: 5px auto 0;
+    border-radius: 2px;
+
 }
