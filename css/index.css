@@ -4,6 +4,8 @@
     font-family: 'Oswald', sans-serif;
     --main-color: #30332E;
     --text-color: #E2E2E2;
+    --orange-color: #bd632f;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -11,8 +13,7 @@ body {
     color: var(--text-color);
     max-width: 980px;
     margin: auto;
-    box-shadow: 0 0 10px #111;
-    overflow: hidden;
+    box-shadow: 0 0 10px #222;
 }
 
 .banner {
@@ -33,6 +34,7 @@ body {
     font-size: 3rem;
 }
 
+
 .banner .button {
     align-self: center;
 }
@@ -41,6 +43,299 @@ body {
     .banner {
         min-height: 600px;
     }
+    .banner h1 {
+        margin-left: 3rem;
+    }
+}
+
+.about-info {
+    text-align: justify;
+    box-shadow: 
+        inset 0px 11px 10px -10px #111,
+        inset 0px -11px 10px -10px #111;
+    padding: 20px 10px;
+}
+.about h2 {
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+    font-size: 1.7rem;
+    margin: 0;
+}
+
+.about h2::after {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 2px;
+    background-color: var(--text-color);
+    margin: 5px auto 0;
+    border-radius: 2px;
+}
+
+.about .about-gallery img {
+    display:block;
+    width: auto;
+    max-height: 200px;
+}
+
+.services {
+ 
+    box-shadow: 
+        inset 0px 11px 10px -10px #111,
+        inset 0px -11px 10px -10px #111;
+    padding: 20px 10px;
+}
+
+.services-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.services h2 {
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+    font-size: 1.7rem;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.services h2::after {
+    content: "";
+    display: block;
+    width: 3.5rem;
+    height: 2px;
+    background-color: var(--text-color);
+    margin: 5px auto 0;
+    border-radius: 2px;
+}
+
+.services .services-item {
+    position:relative;
+    margin: 15px 0;
+    max-width: 345px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 0 15px #111;
+    background-color: var(--orange-color);
+    border-radius: 5px;
+}
+
+.services .services-item:hover {
+    transform: scale(1.015);
+}
+
+.services .services-item:hover img{
+    opacity: 0.3;
+}
+
+.services .services-item:hover h3 {
+    background: none;
+}
+
+.services .services-item img {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    transition: all 0.2s;
+    border-radius: 5px;
+}
+
+.services .services-item h3 {
+    font-family: 'Poiret One', cursive;
+    font-size: 1.6rem;
+    position: absolute;
+    top:50%;
+    transform: translate(0, -50%);
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: rgba(48, 51, 46, 0.8);
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+    opacity: 1;
+    z-index: 1;
+    transition: all 0.2s;
+}
+
+@media (min-width: 620px) {
+    .services-items {
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-gap: 15px;
+    }
+}
+
+@media (min-width: 900px) {
+    .services-items {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+        .services .services-item {
+        max-width: 300px;
+    }
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2b2e29;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.contacts h2 {
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+    font-size: 1.7rem;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.contacts h2::after {
+    content: "";
+    display: block;
+    width: 3.5rem;
+    height: 2px;
+    background-color: var(--text-color);
+    margin: 5px auto 0;
+    border-radius: 2px;
+}
+
+.contacts form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.contacts form input, textarea {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+	display: block;
+	width: 100%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid #989997;
+	background: transparent;
+	margin-bottom: 10px;
+	height: 45px;
+    color: var(--text-color);
+    transition: border-bottom 0.3s;
+}
+
+.contacts form input::placeholder, textarea::placeholder {
+    color: #c1c2c0;
+}
+
+.contacts form input:focus, textarea:focus {
+    border: none;
+    border-bottom: 2px solid var(--text-color);
+    outline: none;
+}
+
+.contacts form textarea {
+    height: 10rem;
+}
+
+.contacts form input.button {
+    text-align: center;
+    border: none;
+    width: 10rem;
+    align-self: center;
+    transition: background-color 0.25s;
+    background-color: #454743;
+    box-shadow: 0 0 8px #222;
+    border-radius: 3px;
+}
+
+.contacts form input.button:hover {
+    background-color: var(--orange-color);
+}
+
+.contacts-info {
+    margin: 30px 0;
+}
+
+.contacts .contacts-info a {
+    text-align: center;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: background-color 0.25s;
+    padding: 12px 6px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+.contacts .contacts-info a:hover {
+    color: var(--orange-color);
+}
+
+.contacts .contacts-info a i {
+    font-size: 1.2rem;
+}
+
+.contacts-map {
+    width: 100%;
+    overflow: hidden;
+    align-self: center;
+}
+
+@media (min-width:620px) {
+    .contacts-map {
+        width: auto;
+    }
+}
+
+footer { 
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 
+    inset 0px 11px 10px -10px #111,
+    inset 0px -11px 10px -10px #111;
+}
+
+footer i {
+    margin: 10px;
+    font-size: 3rem;
+    color: var(--text-color);
+    transition: color .25s;
+}
+
+footer i:hover {
+    color: var(--orange-color);
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 3px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-size: .9rem;
+    transition: color .25s;
+}
+
+footer ul li a:hover {
+    color: var(--orange-color);
 }
 
 .button {
@@ -52,29 +347,11 @@ body {
     text-transform: uppercase;
     border-radius: 3px;
     transition: background 0.45s;
-    background-color: rgba(48, 51, 46, 0.8)
+    background-color: rgba(48, 51, 46, 0.8);
+    cursor: pointer;
+    border: none;
 }
 
 .button:hover {
-    background-color: #bd632f;
-}
-
-
-.about {
-    text-align: center;
-}
-.about h2 {
-    font-family: 'Poiret One', cursive;
-    font-size: 1.7rem;
-}
-
-.about h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 2px;
-    background-color: var(--text-color);
-    margin: 5px auto 0;
-    border-radius: 2px;
-
+    background-color: var(--orange-color);
 }

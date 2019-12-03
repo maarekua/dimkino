@@ -42,15 +42,12 @@ header nav .logo {
     margin: 0.5rem;
 }
 
-/* menu */
-
 header nav .menu {
     clear: both;
     max-height: 0;
     transition: max-height .4s ease-out;
 }
 
-/* menu icon */
 
 header nav .menu-icon {
     cursor: pointer;
@@ -89,8 +86,6 @@ header nav .menu-icon .navicon:after {
     top: -5px;
 }
 
-/* menu btn */
-
 header nav .menu-btn {
     display: none;
 }
@@ -116,9 +111,8 @@ header nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
 }
 
-/* 48em = 768px */
 
-@media (min-width: 48em) {
+@media (min-width: 768px) {
     header nav li {
         float: left;
     }
