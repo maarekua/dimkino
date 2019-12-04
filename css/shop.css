@@ -48,10 +48,30 @@ body {
 }
 
 .shop-items .shop-item {
-
+    margin: 10px 0;
 }
 
 .shop-items .shop-item img {
     display: block;
     width: 100%;
+}
+
+@media (min-width: 620px) {
+    .shop-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    .shop-items .shop-item {
+        margin: 0;
+    }
+}
+
+@media (min-width: 900px) {
+    .shop-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+    }
 }
