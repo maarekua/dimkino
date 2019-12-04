@@ -23,7 +23,7 @@ body {
     box-shadow: 
         inset 0px 11px 10px -10px #111,
         inset 0px -11px 10px -10px #111;
-    padding: 20px 10px;
+    padding: 20px;
 }
 
 .services-items {
@@ -54,8 +54,7 @@ body {
 
 .services .services-item {
     position:relative;
-    margin: 15px 0;
-    max-width: 345px;
+    margin: 10px 0;
     cursor: pointer;
     transition: all 0.2s;
     box-shadow: 0 0 15px #111;
@@ -107,17 +106,17 @@ body {
     .services-items {
         display: grid;
         grid-template-columns: 300px 300px;
-        grid-gap: 15px;
+        grid-gap: 10px;
+    }
+
+    .services-items .services-item {
+        margin: 0;
     }
 }
 
 @media (min-width: 900px) {
     .services-items {
         grid-template-columns: 1fr 1fr 1fr;
-    }
-
-        .services .services-item {
-        max-width: 300px;
     }
 }
 
