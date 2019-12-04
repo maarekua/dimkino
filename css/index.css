@@ -79,7 +79,6 @@ body {
 }
 
 .services {
- 
     box-shadow: 
         inset 0px 11px 10px -10px #111,
         inset 0px -11px 10px -10px #111;
@@ -228,6 +227,7 @@ body {
 	border-bottom: 1px solid #989997;
 	background: transparent;
 	margin-bottom: 10px;
+    resize: none;
 	height: 45px;
     color: var(--text-color);
     transition: border-bottom 0.3s;
@@ -274,6 +274,7 @@ body {
     padding: 12px 6px;
     margin-right: 5px;
     border-radius: 3px;
+    transition: color .25s;
 }
 
 .contacts .contacts-info a:hover {

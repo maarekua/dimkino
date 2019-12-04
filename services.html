@@ -4,97 +4,89 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>ДімКіно - Послуги</title>
+        <title>ДімКіно - Портфоліо</title>
         <link rel="stylesheet" href="css/services.css">
+        <link rel="stylesheet" href="css/navmenu.css">
         <link rel="icon" href="images/picon.png">
         <script src="https://kit.fontawesome.com/68324b0018.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
-            <div id="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="ДімКіно - Домашній кінотеатр, HIFI та HIEND аудіосистеми">
-                </a>
-            </div>
             <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">Головна</a>
-                    </li>
-                    <li>
-                        <a href="portfolio.html">Портфоліо</a>
-                    </li>
-                    <li>
-                        <a href="services.html">Послуги</a>
-                    </li>
-                    <li>
-                        <a href="shop.html">Магазин</a>
-                    </li>
-                    <li>
-                        <a href="contacts.html">Контакти</a>
-                    </li>
-                    <li>
-                        <a href="shopping-cart.html"><i class="fas fa-shopping-cart"></i></a>
-                    </li>
+                <a href="index.html">
+                    <img class="logo" src="images/logo.png" alt="ДімКіно - Домашній кінотеатр, HIFI та HIEND аудіосистеми">
+                </a>
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                <ul class="menu">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="portfolio.html">Портфоліо</a></li>
+                    <li><a href="services.html">Послуги</a></li>
+                    <li><a href="shop.html">Магазин</a></li>
+                    <li><a href="contacts.html">Контакти</a></li>
+                    <li><a href="shopping-cart.html"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
             </nav>
         </header>
+        <div class="clear"></div>
         <main>
-            <section>
-            <h2>Наші Послуги</h2>
-                <div>
-                <a href="#">
-                    <img src="images/services/hifi-hiend-stereo.jpg" alt="Стерео Акустика">
-                    <h3>Стерео Акустика</h3>
-                </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="images/services/homecinema.jpg" alt="Домашні кінотеатри">
-                        <h3>Домашні кінотеатри</h3>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="images/services/multiroom.jpg" alt="Аудіо Мультирум">
-                        <h3>Аудіо Мультирум</h3>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="images/services/tv.jpg" alt="Телевізори">
-                        <h3>Телевізори</h3>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="images/services/video-server.jpg" alt="Відео Мультирум">
-                        <h3>Відео Мультирум</h3>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="images/services/karaoke.jpg" alt="Караоке">
-                        <h3>Караоке</h3>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="images/services/network.jpg" alt="Локальна Мережа">
-                        <h3>Локальна Мережа</h3>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="images/services/cables.jpg" alt="Кабелювання">
-                        <h3>Кабелювання</h3>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="images/services/design.jpg" alt="Проектування">
-                        <h3>Проектування</h3>
-                    </a>
+           <section class="services">
+                <h2>Наші Послуги</h2>
+                <div class="services-items">
+                    <article class="services-item">
+                        <a href="#">
+                            <h3>Стерео Акустика</h3>
+                            <img src="images/services/hifi-hiend-stereo.jpg" alt="Стерео Акустика">
+                        </a>
+                    </article>
+                    <article class="services-item">
+                        <a href="#">
+                            <h3>Домашні кінотеатри</h3>
+                            <img src="images/services/homecinema.jpg" alt="Домашні кінотеатри">  
+                        </a>
+                    </article>
+                    <article class="services-item">
+                        <a href="#">
+                            <h3>Аудіо Мультирум</h3>
+                            <img src="images/services/multiroom.jpg" alt="Аудіо Мультирум">
+                        </a>
+                    </article>
+                    <article class="services-item">
+                        <a href="#">
+                            <h3>Телевізори</h3>
+                            <img src="images/services/tv.jpg" alt="Телевізори">
+                        </a>
+                    </article>
+                    <article class="services-item">
+                        <a href="#">
+                            <h3>Відео Мультирум</h3>
+                            <img src="images/services/video-server.jpg" alt="Відео Мультирум">
+                        </a>
+                    </article>
+                    <article class="services-item">
+                        <a href="#">
+                            <h3>Караоке</h3>
+                            <img src="images/services/karaoke.jpg" alt="Караоке">
+                        </a>
+                    </article>
+                    <article class="services-item">
+                        <a href="#">
+                            <h3>Локальна Мережа</h3>
+                            <img src="images/services/network.jpg" alt="Локальна Мережа">
+                        </a>
+                    </article>
+                    <article class="services-item">
+                        <a href="#">
+                            <h3>Кабелювання</h3>
+                            <img src="images/services/cables.jpg" alt="Кабелювання">
+                        </a>
+                    </article>
+                    <article class="services-item">
+                        <a href="#">
+                            <h3>Проектування</h3>
+                            <img src="images/services/design.jpg" alt="Проектування">
+                        </a>
+                    </article>
                 </div>
             </section>
         </main>

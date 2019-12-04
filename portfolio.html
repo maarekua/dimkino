@@ -6,69 +6,88 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>ДімКіно - Портфоліо</title>
         <link rel="stylesheet" href="css/portfolio.css">
+        <link rel="stylesheet" href="css/navmenu.css">
         <link rel="icon" href="images/picon.png">
         <script src="https://kit.fontawesome.com/68324b0018.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
-            <div id="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="ДімКіно - Домашній кінотеатр, HIFI та HIEND аудіосистеми">
-                </a>
-            </div>
             <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">Головна</a>
-                    </li>
-                    <li>
-                        <a href="portfolio.html">Портфоліо</a>
-                    </li>
-                    <li>
-                        <a href="services.html">Послуги</a>
-                    </li>
-                    <li>
-                        <a href="shop.html">Магазин</a>
-                    </li>
-                    <li>
-                        <a href="contacts.html">Контакти</a>
-                    </li>
-                    <li>
-                        <a href="shopping-cart.html"><i class="fas fa-shopping-cart"></i></a>
-                    </li>
+                <a href="index.html">
+                    <img class="logo" src="images/logo.png" alt="ДімКіно - Домашній кінотеатр, HIFI та HIEND аудіосистеми">
+                </a>
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                <ul class="menu">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="portfolio.html">Портфоліо</a></li>
+                    <li><a href="services.html">Послуги</a></li>
+                    <li><a href="shop.html">Магазин</a></li>
+                    <li><a href="contacts.html">Контакти</a></li>
+                    <li><a href="shopping-cart.html"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
             </nav>
         </header>
+        <div class="clear"></div>
         <main>
-            <section>
+            <section class="portfolio" >
                 <h2>Виконані роботи</h2>
-                <a href="#">
-                    <img src="images/portfolio/mc-cremonese.jpg" alt="Стереокомплект - McIntosh - Sonus Faber Il Cremonese">
-                </a>
-                <a href="#">
-                    <img src="images/portfolio/mc-xr100.jpg" alt="Домашній кінотеатр - Mcintosh XR100">
-                </a>
-                <a href="#">
-                    <img src="images/portfolio/denon-monitor.jpg" alt="Стереокомплект Denon - Monitor Audio">
-                </a>
-                <a href="#">
-                    <img src="images/portfolio/mc-klipsch.jpg" alt="Домашній кінотеатр - Mcintosh - Klipsch Palladium">
-                </a>
-                <a href="#">
-                    <img src="images/portfolio/mc-jbl-ls.jpg" alt="Домашній кінотеатр - McIntosh - JBL LS">
-                </a>
-                <a href="#">
-                    <img src="images/portfolio/onkyo-jbl-ls.jpg" alt="Домашній кінотеатр - Onkyo - JBL LS">
-                </a>
-                <a href="#">
-                    <img src="images/portfolio/panasonic-jbl-ls.jpg" alt="Домашній кінотеатр - Panasonic - JBL LS">
-                </a>
-                <a href="#">
-                    <img src="images/portfolio/yamaha-jbl-ls.jpg" alt="Домашній кінотеатр - Yamaha - JBL LS">
-                </a>
-                <a href="#">
-                    <img src="images/portfolio/yamaha-jbl-studio.jpg" alt="Домашній кінотеатр - Yamaha - JBL Studio">
-                </a>
+                <div class="portfolio-items">
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <span>Більше Інформації</span>
+                            <img src="images/portfolio/mc-cremonese.jpg" alt="Стереокомплект - McIntosh - Sonus Faber Il Cremonese">
+                        </a>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <span>Більше Інформації</span>
+                            <img src="images/portfolio/mc-xr100.jpg" alt="Домашній кінотеатр - Mcintosh XR100">
+                        </a>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <span>Більше Інформації</span>
+                            <img src="images/portfolio/denon-monitor.jpg" alt="Стереокомплект Denon - Monitor Audio">
+                        </a>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <span>Більше Інформації</span>
+                            <img src="images/portfolio/mc-klipsch.jpg" alt="Домашній кінотеатр - Mcintosh - Klipsch Palladium">
+                        </a>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <span>Більше Інформації</span>
+                            <img src="images/portfolio/mc-jbl-ls.jpg" alt="Домашній кінотеатр - McIntosh - JBL LS">
+                        </a>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <span>Більше Інформації</span>
+                            <img src="images/portfolio/onkyo-jbl-ls.jpg" alt="Домашній кінотеатр - Onkyo - JBL LS">
+                        </a>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <span>Більше Інформації</span>
+                            <img src="images/portfolio/panasonic-jbl-ls.jpg" alt="Домашній кінотеатр - Panasonic - JBL LS">
+                        </a>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <span>Більше Інформації</span>
+                            <img src="images/portfolio/yamaha-jbl-ls.jpg" alt="Домашній кінотеатр - Yamaha - JBL LS">
+                        </a>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="#">
+                            <span>Більше Інформації</span>
+                            <img src="images/portfolio/yamaha-jbl-studio.jpg" alt="Домашній кінотеатр - Yamaha - JBL Studio">
+                        </a>
+                    </div>
+                </div>
             </section>
         </main>
         <footer>
