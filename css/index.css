@@ -5,6 +5,7 @@
     --main-color: #30332E;
     --text-color: #E2E2E2;
     --orange-color: #bd632f;
+    --default-transition: .35s ease-in-out;
     scroll-behavior: smooth;
 }
 
@@ -115,7 +116,7 @@ body {
     position:relative;
     margin: 10px 0;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all var(--default-transition);
     box-shadow: 0 0 15px #111;
     background-color: var(--orange-color);
     border-radius: 5px;
@@ -139,7 +140,7 @@ body {
     margin: 0;
     padding: 0;
     opacity: 1;
-    transition: all 0.2s;
+    transition: all var(--default-transition);
     border-radius: 5px;
 }
 
@@ -158,7 +159,7 @@ body {
     margin: 0;
     opacity: 1;
     z-index: 1;
-    transition: all 0.2s;
+    transition: all var(--default-transition);
 }
 
 @media (min-width: 620px) {
@@ -229,7 +230,7 @@ body {
     resize: none;
 	height: 45px;
     color: var(--text-color);
-    transition: border-bottom 0.3s;
+    transition: border-bottom var(--default-transition);
 }
 
 .contacts form input::placeholder, textarea::placeholder {
@@ -251,7 +252,7 @@ body {
     border: none;
     width: 10rem;
     align-self: center;
-    transition: background-color 0.25s;
+    transition: background-color var(--default-transition);
     background-color: #454743;
     box-shadow: 0 0 8px #222;
     border-radius: 3px;
@@ -269,11 +270,10 @@ body {
     text-align: center;
     color: var(--text-color);
     text-decoration: none;
-    transition: background-color 0.25s;
+    transition: all var(--default-transition);
     padding: 12px 6px;
     margin-right: 5px;
     border-radius: 3px;
-    transition: color .25s;
 }
 
 .contacts .contacts-info a:hover {
@@ -308,7 +308,7 @@ footer i {
     margin: 10px;
     font-size: 3rem;
     color: var(--text-color);
-    transition: color .25s;
+    transition: color var(--default-transition);
 }
 
 footer i:hover {
@@ -331,7 +331,7 @@ footer ul li a {
     text-transform: uppercase;
     color: var(--text-color);
     font-size: .9rem;
-    transition: color .25s;
+    transition: color var(--default-transition);
 }
 
 footer ul li a:hover {
@@ -346,7 +346,7 @@ footer ul li a:hover {
     color: var(--text-color);
     text-transform: uppercase;
     border-radius: 3px;
-    transition: background 0.45s;
+    transition: background var(--default-transition);
     background-color: rgba(48, 51, 46, 0.8);
     cursor: pointer;
     border: none;
