@@ -1,66 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald|Poiret+One&display=swap');
-
-:root {
-    font-family: 'Oswald', sans-serif;
-    --main-color: #30332E;
-    --text-color: #E2E2E2;
-    --orange-color: #bd632f;
-    --default-transition: .35s ease-in-out;
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--main-color);
-    color: var(--text-color);
-    max-width: 980px;
-    margin: auto;
-    box-shadow: 0 0 10px #222;
-}
-
 .banner {
-    background-image: url('../images/sonusfabe-ilcremonese.jpg');
-    background-position: right;
-    background-size: cover;
-    min-height: 450px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
-    
+    align-items: center;
+    min-height: 30rem;
+    padding: 0 1rem;
+    background-image: url('../images/sonusfaber-ilcremonese.jpg');
+    background-position: right;
+    background-size: cover;
 }
 
 .banner h1 {
+    width: 100%;
     margin-left: 1rem;
     font-family: 'Poiret One', cursive;
     font-size: 3rem;
 }
 
-
-.banner .button {
-    align-self: center;
-}
-
 @media (min-width: 48em) {
     .banner {
-        min-height: 600px;
+        min-height: 36rem;
     }
+
     .banner h1 {
         margin-left: 3rem;
     }
 }
 
-.about-info {
-    text-align: justify;
-    box-shadow: 
-        inset 0px 11px 10px -10px #111,
-        inset 0px -11px 10px -10px #111;
+.about {
     padding: 20px 10px;
+    box-shadow: var(--top-bottom-shadow);
+    text-align: justify;
 }
+
 .about h2 {
-    text-align: center;
+    margin: 0;
     font-family: 'Poiret One', cursive;
     font-size: 1.7rem;
-    margin: 0;
+    text-align: center;
 }
 
 .about h2::after {
@@ -68,38 +45,33 @@ body {
     display: block;
     width: 2.5rem;
     height: 2px;
-    background-color: var(--text-color);
     margin: 5px auto 0;
+    background-color: var(--text-color);
     border-radius: 2px;
 }
 
-.about .about-gallery img {
-    display:block;
+main .gallery .gallery-item {
+    display: block;
     width: auto;
     max-height: 200px;
 }
 
 .services {
-    box-shadow: 
-        inset 0px 11px 10px -10px #111,
-        inset 0px -11px 10px -10px #111;
+    box-shadow: var(--top-bottom-shadow);
     padding: 20px;
 }
 
 .services-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
 }
 
 .services h2 {
+    margin: 0;
     text-align: center;
     font-family: 'Poiret One', cursive;
     font-size: 1.7rem;
-    margin: 0;
-    margin-bottom: 15px;
 }
 
 .services h2::after {
@@ -107,19 +79,18 @@ body {
     display: block;
     width: 3.5rem;
     height: 2px;
+    margin: 5px auto 20px;
     background-color: var(--text-color);
-    margin: 5px auto 0;
     border-radius: 2px;
 }
 
 .services .services-item {
-    position:relative;
-    margin: 10px 0;
+    position: relative;
+    background-color: var(--orange-color);
+    border-radius: 4px;
+    box-shadow: 0 0 15px #111;
     cursor: pointer;
     transition: all var(--default-transition);
-    box-shadow: 0 0 15px #111;
-    background-color: var(--orange-color);
-    border-radius: 5px;
 }
 
 .services .services-item:hover {
@@ -141,22 +112,22 @@ body {
     padding: 0;
     opacity: 1;
     transition: all var(--default-transition);
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 .services .services-item h3 {
-    font-family: 'Poiret One', cursive;
-    font-size: 1.6rem;
     position: absolute;
     top:50%;
     transform: translate(0, -50%);
+    width: 100%;
+    padding: 20px 0;
+    margin: 0;
+    font-family: 'Poiret One', cursive;
+    font-size: 1.6rem;
+    text-align: center;
     text-decoration: none;
     color: var(--text-color);
     background-color: rgba(48, 51, 46, 0.8);
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    margin: 0;
     opacity: 1;
     z-index: 1;
     transition: all var(--default-transition);
@@ -164,14 +135,8 @@ body {
 
 @media (min-width: 620px) {
     .services-items {
-        display: grid;
-        grid-template-columns: 300px 300px;
-        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
     };
-
-    .services-items .services-item {
-        margin: 0;
-    }
 }
 
 @media (min-width: 900px) {
@@ -182,20 +147,18 @@ body {
 
 .contacts {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    padding: 20px;
     background-color: #2b2e29;
-    padding-top: 20px;
-    padding-bottom: 40px;
 }
 
 .contacts h2 {
+    margin: 0;
     text-align: center;
     font-family: 'Poiret One', cursive;
     font-size: 1.7rem;
-    margin: 0;
-    margin-bottom: 15px;
 }
 
 .contacts h2::after {
@@ -203,33 +166,29 @@ body {
     display: block;
     width: 3.5rem;
     height: 2px;
+    margin: 5px auto 20px;
     background-color: var(--text-color);
-    margin: 5px auto 0;
     border-radius: 2px;
 }
 
 .contacts form {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     width: 90%;
-    border-radius: 5px;
 }
 
 .contacts form input, textarea {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1rem;
-    box-sizing: border-box;
 	display: block;
 	width: 100%;
-	padding: 7px;
-	border: none;
-	border-bottom: 1px solid #989997;
-	background: transparent;
-	margin-bottom: 10px;
-    resize: none;
 	height: 45px;
+    border: none;
+	border-bottom: 1px solid #989997;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+	background: transparent;
     color: var(--text-color);
+    resize: none;
     transition: border-bottom var(--default-transition);
 }
 
@@ -251,29 +210,24 @@ body {
     text-align: center;
     border: none;
     width: 10rem;
-    align-self: center;
-    transition: background-color var(--default-transition);
+    margin: 15px auto;
     background-color: #454743;
-    box-shadow: 0 0 8px #222;
     border-radius: 3px;
+    box-shadow: 0 0 8px #222;
+    transition: background-color var(--default-transition);
 }
 
 .contacts form input.button:hover {
     background-color: var(--orange-color);
 }
 
-.contacts-info {
-    margin: 30px 0;
-}
-
 .contacts .contacts-info a {
-    text-align: center;
     color: var(--text-color);
     text-decoration: none;
+    text-align: center;
+    border-radius: 2px;
     transition: all var(--default-transition);
-    padding: 12px 6px;
-    margin-right: 5px;
-    border-radius: 3px;
+    margin: 0 5px;
 }
 
 .contacts .contacts-info a:hover {
@@ -285,73 +239,13 @@ body {
 }
 
 .contacts-map {
+    margin-top: 1rem;
     width: 100%;
     overflow: hidden;
-    align-self: center;
 }
 
 @media (min-width:620px) {
     .contacts-map {
         width: auto;
     }
-}
-
-footer { 
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 
-    inset 0px 11px 10px -10px #111,
-    inset 0px -11px 10px -10px #111;
-}
-
-footer i {
-    margin: 10px;
-    font-size: 3rem;
-    color: var(--text-color);
-    transition: color var(--default-transition);
-}
-
-footer i:hover {
-    color: var(--orange-color);
-}
-
-footer ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-footer ul li {
-    display: inline-block;
-    padding: 3px;
-}
-
-footer ul li a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--text-color);
-    font-size: .9rem;
-    transition: color var(--default-transition);
-}
-
-footer ul li a:hover {
-    color: var(--orange-color);
-}
-
-.button {
-    margin: 5px;
-    display: block;
-    padding: 10px 16px;
-    text-decoration: none;
-    color: var(--text-color);
-    text-transform: uppercase;
-    border-radius: 3px;
-    transition: background var(--default-transition);
-    background-color: rgba(48, 51, 46, 0.8);
-    cursor: pointer;
-    border: none;
-}
-
-.button:hover {
-    background-color: var(--orange-color);
 }

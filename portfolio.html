@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>ДімКіно - Портфоліо</title>
-        <link rel="stylesheet" href="css/portfolio.css">
         <link rel="stylesheet" href="css/navmenu.css">
+        <link rel="stylesheet" href="css/portfolio.css">
         <link rel="icon" href="images/picon.png">
         <script src="https://kit.fontawesome.com/68324b0018.js" crossorigin="anonymous"></script>
     </head>
@@ -16,13 +16,13 @@
                 <a href="index.html">
                     <img class="logo" src="images/logo.png" alt="ДімКіно - Домашній кінотеатр, HIFI та HIEND аудіосистеми">
                 </a>
-                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <input class="menu-btn" type="checkbox" id="menu-btn">
                 <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
                 <ul class="menu">
                     <li><a href="index.html">Головна</a></li>
-                    <li><a href="portfolio.html">Портфоліо</a></li>
+                    <li><a class="active" href="portfolio.html">Портфоліо</a></li>
                     <li><a href="services.html">Послуги</a></li>
-                    <li><a href="shop.html">Магазин</a></li>
+                    <li><a href="products.html">Магазин</a></li>
                     <li><a href="contacts.html">Контакти</a></li>
                     <li><a href="shopping-cart.html"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
@@ -33,7 +33,7 @@
             <section class="portfolio" >
                 <h2>Виконані роботи</h2>
                 <div class="portfolio-items">
-                    <div class="portfolio-item">
+                    <div class="portfolio-item big-firstrow">
                         <a href="#">
                             <span>Більше Інформації</span>
                             <img src="images/portfolio/mc-cremonese.jpg" alt="Стереокомплект - McIntosh - Sonus Faber Il Cremonese">
@@ -51,7 +51,7 @@
                             <img src="images/portfolio/denon-monitor.jpg" alt="Стереокомплект Denon - Monitor Audio">
                         </a>
                     </div>
-                    <div class="portfolio-item">
+                    <div class="portfolio-item big-secondrow">
                         <a href="#">
                             <span>Більше Інформації</span>
                             <img src="images/portfolio/mc-klipsch.jpg" alt="Домашній кінотеатр - Mcintosh - Klipsch Palladium">
@@ -91,34 +91,16 @@
             </section>
         </main>
         <footer>
-            <a href="#">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-youtube"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-facebook-square"></i>
-            </a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
             <ul>
-                <li>
-                    <a href="index.html">Головна</a>
-                </li>
-                <li>
-                    <a href="portfolio.html">Портфоліо</a>
-                </li>
-                <li>
-                    <a href="services.html">Послуги</a>
-                </li>
-                <li>
-                    <a href="shop.html">Магазин</a>
-                </li>
-                <li>
-                    <a href="shopping-cart.html">Корзина</a>
-                </li>
-                <li>
-                    <a href="contacts.html">Контакти</a>
-                </li>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="portfolio.html">Портфоліо</a></li>
+                <li><a href="services.html">Послуги</a></li>
+                <li><a href="products.html">Магазин</a></li>
+                <li><a href="shopping-cart.html">Корзина</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
             </ul>
             <p>© 2019 Markiyan</p>
         </footer>
