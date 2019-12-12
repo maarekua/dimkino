@@ -1,3 +1,15 @@
+header {
+    background-image: url('../images/sonusfaber-ilcremonese.jpg');
+    background-size: cover;
+    background-position: 80%;
+}
+
+header nav {
+    box-shadow: none;
+    transition: background-color var(--default-transition);
+}
+
+
 .banner {
     display: flex;
     flex-direction: column;
@@ -5,9 +17,7 @@
     align-items: center;
     min-height: 30rem;
     padding: 0 1rem;
-    background-image: url('../images/sonusfaber-ilcremonese.jpg');
-    background-position: right;
-    background-size: cover;
+
 }
 
 .banner h1 {

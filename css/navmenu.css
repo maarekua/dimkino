@@ -2,7 +2,7 @@
 
 :root {
     font-family: 'Oswald', sans-serif;
-    --main-color: #30332E;
+    --main-color: #30332e;
     --text-color: #E2E2E2;
     --orange-color: #bd632f;
     --default-transition: .35s;
@@ -136,6 +136,7 @@ header nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 
     header nav li a {
         padding: 1rem;
+        margin: 0 2px;
     }
 
     header nav ul {
