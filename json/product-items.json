@@ -1,0 +1,22 @@
+{
+    "speakers": [ 
+        {
+            "brand": "Wilson Audio",
+            "model": "Сhronosonic-XVX",
+            "price": 850000,
+            "imgName": "wilson-audio/chronosonic-xvx.jpg"
+        },
+        {
+            "brand": "Wilson Audio",
+            "model": "Alexandria-XLF",
+            "price": 210000,
+            "imgName": "wilson-audio/alexandria-xlf.jpg"
+        },
+        {
+            "brand": "Wilson Audio",
+            "model": "Alexx",
+            "price": 135000,
+            "imgName": "wilson-audio/alexx.jpg"
+        }
+    ]
+}
