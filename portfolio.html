@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>ДімКіно - Портфоліо</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />  
         <link rel="stylesheet" href="css/navmenu.css">
         <link rel="stylesheet" href="css/portfolio.css">
         <link rel="icon" href="images/picon.png">
-        <script src="https://kit.fontawesome.com/68324b0018.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
@@ -23,8 +23,7 @@
                     <li><a class="active" href="portfolio.html">Портфоліо</a></li>
                     <li><a href="services.html">Послуги</a></li>
                     <li><a href="products.html">Магазин</a></li>
-                    <li><a href="contacts.html">Контакти</a></li>
-                    <li><a href="shopping-cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="contacts.html" id="manual-ajax">Контакти</a></li>
                 </ul>
             </nav>
         </header>
@@ -34,73 +33,53 @@
                 <div class="testinner">
                 <h2>Lorem</h2>
                 <img src="images/portfolio/mc-cremonese.jpg" alt="Стереокомплект - McIntosh - Sonus Faber Il Cremonese">
-                    
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                   nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-                    culpa qui officia deserunt mollit anim id est laborum.</p>
-                        
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                culpa qui officia deserunt mollit anim id est laborum.</p>        
                 </div>
             </section>
-            <section class="portfolio" >
+            <section class="portfolio">
                 <h2>Виконані роботи</h2>
                 <div class="portfolio-items">
                     <div class="portfolio-item big-firstrow show">
-                        <a href="#">
-                            <span>Більше Інформації</span>
-                            <img src="images/portfolio/mc-cremonese.jpg" alt="Стереокомплект - McIntosh - Sonus Faber Il Cremonese">
-                        </a>
+                        <span>Більше Інформації</span>
+                        <img src="images/portfolio/mc-cremonese.jpg" alt="Стереокомплект - McIntosh - Sonus Faber Il Cremonese">
                     </div>
                     <div class="portfolio-item">
-                        <a href="#">
-                            <span>Більше Інформації</span>
-                            <img src="images/portfolio/mc-xr100.jpg" alt="Домашній кінотеатр - Mcintosh XR100">
-                        </a>
+                        <span>Більше Інформації</span>
+                        <img src="images/portfolio/mc-xr100.jpg" alt="Домашній кінотеатр - Mcintosh XR100">
                     </div>
                     <div class="portfolio-item">
-                        <a href="#">
-                            <span>Більше Інформації</span>
-                            <img src="images/portfolio/denon-monitor.jpg" alt="Стереокомплект Denon - Monitor Audio">
-                        </a>
+                        <span>Більше Інформації</span>
+                        <img src="images/portfolio/denon-monitor.jpg" alt="Стереокомплект Denon - Monitor Audio">
                     </div>
                     <div class="portfolio-item big-secondrow">
-                        <a href="#">
-                            <span>Більше Інформації</span>
-                            <img src="images/portfolio/mc-klipsch.jpg" alt="Домашній кінотеатр - Mcintosh - Klipsch Palladium">
-                        </a>
+                        <span>Більше Інформації</span>
+                        <img src="images/portfolio/mc-klipsch.jpg" alt="Домашній кінотеатр - Mcintosh - Klipsch Palladium">
                     </div>
                     <div class="portfolio-item">
-                        <a href="#">
-                            <span>Більше Інформації</span>
-                            <img src="images/portfolio/mc-jbl-ls.jpg" alt="Домашній кінотеатр - McIntosh - JBL LS">
-                        </a>
+                        <span>Більше Інформації</span>
+                        <img src="images/portfolio/mc-jbl-ls.jpg" alt="Домашній кінотеатр - McIntosh - JBL LS">
                     </div>
                     <div class="portfolio-item">
-                        <a href="#">
-                            <span>Більше Інформації</span>
-                            <img src="images/portfolio/onkyo-jbl-ls.jpg" alt="Домашній кінотеатр - Onkyo - JBL LS">
-                        </a>
+                        <span>Більше Інформації</span>
+                        <img src="images/portfolio/onkyo-jbl-ls.jpg" alt="Домашній кінотеатр - Onkyo - JBL LS">
                     </div>
                     <div class="portfolio-item">
-                        <a href="#">
-                            <span>Більше Інформації</span>
-                            <img src="images/portfolio/panasonic-jbl-ls.jpg" alt="Домашній кінотеатр - Panasonic - JBL LS">
-                        </a>
+                        <span>Більше Інформації</span>
+                        <img src="images/portfolio/panasonic-jbl-ls.jpg" alt="Домашній кінотеатр - Panasonic - JBL LS">
                     </div>
                     <div class="portfolio-item">
-                        <a href="#">
-                            <span>Більше Інформації</span>
-                            <img src="images/portfolio/yamaha-jbl-ls.jpg" alt="Домашній кінотеатр - Yamaha - JBL LS">
-                        </a>
+                        <span>Більше Інформації</span>
+                        <img src="images/portfolio/yamaha-jbl-ls.jpg" alt="Домашній кінотеатр - Yamaha - JBL LS">
                     </div>
                     <div class="portfolio-item">
-                        <a href="#">
-                            <span>Більше Інформації</span>
-                            <img src="images/portfolio/yamaha-jbl-studio.jpg" alt="Домашній кінотеатр - Yamaha - JBL Studio">
-                        </a>
+                        <span>Більше Інформації</span>
+                        <img src="images/portfolio/yamaha-jbl-studio.jpg" alt="Домашній кінотеатр - Yamaha - JBL Studio">
                     </div>
                 </div>
             </section>
@@ -119,7 +98,9 @@
             </ul>
             <p>© 2019 Markiyan</p>
         </footer>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/68324b0018.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
         <script src="js/portfolio.js"></script>
     </body>
 </html>

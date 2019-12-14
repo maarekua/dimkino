@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>ДімКіно - Портфоліо</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />  
         <link rel="stylesheet" href="css/navmenu.css">
         <link rel="stylesheet" href="css/services.css">
         <link rel="icon" href="images/picon.png">
-        <script src="https://kit.fontawesome.com/68324b0018.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
@@ -23,8 +23,7 @@
                     <li><a href="portfolio.html">Портфоліо</a></li>
                     <li><a class="active" href="services.html">Послуги</a></li>
                     <li><a href="products.html">Магазин</a></li>
-                    <li><a href="contacts.html">Контакти</a></li>
-                    <li><a href="shopping-cart.html"><i class="fas fa-user"></i></a></li>
+                    <li><a href="contacts.html" id="manual-ajax">Контакти</a></li>
                 </ul>
             </nav>
         </header>
@@ -34,58 +33,40 @@
                 <h2>Наші Послуги</h2>
                 <div class="services-items">
                     <article class="services-item">
-                        <a href="#">
                             <h3>Стерео Акустика</h3>
                             <img src="images/services/hifi-hiend-stereo.jpg" alt="Стерео Акустика">
-                        </a>
                     </article>
                     <article class="services-item">
-                        <a href="#">
                             <h3>Домашні кінотеатри</h3>
                             <img src="images/services/homecinema.jpg" alt="Домашні кінотеатри">  
-                        </a>
                     </article>
                     <article class="services-item">
-                        <a href="#">
                             <h3>Аудіо Мультирум</h3>
                             <img src="images/services/multiroom.jpg" alt="Аудіо Мультирум">
-                        </a>
                     </article>
                     <article class="services-item">
-                        <a href="#">
                             <h3>Телевізори</h3>
                             <img src="images/services/tv.jpg" alt="Телевізори">
-                        </a>
                     </article>
                     <article class="services-item">
-                        <a href="#">
                             <h3>Відео Мультирум</h3>
                             <img src="images/services/video-server.jpg" alt="Відео Мультирум">
-                        </a>
                     </article>
                     <article class="services-item">
-                        <a href="#">
                             <h3>Караоке</h3>
                             <img src="images/services/karaoke.jpg" alt="Караоке">
-                        </a>
                     </article>
                     <article class="services-item">
-                        <a href="#">
                             <h3>Локальна Мережа</h3>
                             <img src="images/services/network.jpg" alt="Локальна Мережа">
-                        </a>
                     </article>
                     <article class="services-item">
-                        <a href="#">
                             <h3>Кабелювання</h3>
                             <img src="images/services/cables.jpg" alt="Кабелювання">
-                        </a>
                     </article>
                     <article class="services-item">
-                        <a href="#">
                             <h3>Проектування</h3>
                             <img src="images/services/design.jpg" alt="Проектування">
-                        </a>
                     </article>
                 </div>
             </section>
@@ -104,5 +85,9 @@
             </ul>
             <p>© 2019 Markiyan</p>
         </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/68324b0018.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <script src="js/services.js"></script>
     </body>
 </html>

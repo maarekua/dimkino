@@ -6,7 +6,7 @@ header {
 
 header nav {
     box-shadow: none;
-    transition: background-color var(--default-transition);
+    transition: background-color var(--main-transition);
 }
 
 
@@ -17,7 +17,6 @@ header nav {
     align-items: center;
     min-height: 30rem;
     padding: 0 1rem;
-
 }
 
 .banner h1 {
@@ -27,84 +26,107 @@ header nav {
     font-size: 3rem;
 }
 
-@media (min-width: 48em) {
+.banner .banner-btn {
+    display: block;
+    margin: 2rem;
+    padding: 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--text-color);
+    background-color: var(--main-transparent-color);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color var(--main-transition);
+}
+
+.banner .banner-btn:hover {
+    background-color: var(--event-color);
+}
+
+@media (min-width: 760px) {
     .banner {
-        min-height: 36rem;
+        min-height: 40rem;
     }
 
     .banner h1 {
-        margin-left: 3rem;
+        margin-left: 4rem;
     }
 }
 
 .about {
-    padding: 20px 10px;
-    box-shadow: var(--top-bottom-shadow);
+    padding: 2rem;
+    box-shadow: var(--top-shadow),
+                var(--bottom-shadow);
     text-align: justify;
 }
 
-.about h2 {
-    margin: 0;
+.about h2,
+.services h2,
+.contacts h2 {
     font-family: 'Poiret One', cursive;
     font-size: 1.7rem;
     text-align: center;
 }
 
-.about h2::after {
+.about h2:after,
+.services h2:after,
+.contacts h2:after {
     content: "";
     display: block;
-    width: 2.5rem;
+    width: 3rem;
     height: 2px;
     margin: 5px auto 0;
     background-color: var(--text-color);
     border-radius: 2px;
 }
 
+.about p {
+    padding: 1rem 0;
+}
+
 main .gallery .gallery-item {
+    cursor: grab;
     display: block;
     width: auto;
-    max-height: 200px;
+    max-height: 12rem;
+}
+
+main .gallery .gallery-item:active {
+    cursor: grabbing;
+}
+
+@media (min-width: 760px) {
+    main .gallery .gallery-item {
+        max-height: 16rem;
+    }
+    
 }
 
 .services {
-    box-shadow: var(--top-bottom-shadow);
-    padding: 20px;
+    box-shadow: var(--top-shadow),
+                var(--bottom-shadow);
+    padding: 2rem 1.5rem;
 }
 
 .services-items {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-}
-
-.services h2 {
-    margin: 0;
-    text-align: center;
-    font-family: 'Poiret One', cursive;
-    font-size: 1.7rem;
-}
-
-.services h2::after {
-    content: "";
-    display: block;
-    width: 3.5rem;
-    height: 2px;
-    margin: 5px auto 20px;
-    background-color: var(--text-color);
-    border-radius: 2px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .services .services-item {
     position: relative;
-    background-color: var(--orange-color);
-    border-radius: 4px;
-    box-shadow: 0 0 15px #111;
+    background-color: var(--event-color);
+    border-radius: 3px;
+    box-shadow: var(--item-shadow);
     cursor: pointer;
-    transition: all var(--default-transition);
+    transition: all var(--main-transition);
 }
 
 .services .services-item:hover {
-    transform: scale(1.015);
+    transform: scale(1.01);
 }
 
 .services .services-item:hover img{
@@ -112,7 +134,7 @@ main .gallery .gallery-item {
 }
 
 .services .services-item:hover h3 {
-    background: none;
+    background: transparent;
 }
 
 .services .services-item img {
@@ -121,8 +143,8 @@ main .gallery .gallery-item {
     margin: 0;
     padding: 0;
     opacity: 1;
-    transition: all var(--default-transition);
-    border-radius: 4px;
+    transition: all var(--main-transition);
+    border-radius: 3px;
 }
 
 .services .services-item h3 {
@@ -137,125 +159,8 @@ main .gallery .gallery-item {
     text-align: center;
     text-decoration: none;
     color: var(--text-color);
-    background-color: rgba(48, 51, 46, 0.8);
+    background-color: var(--main-transparent-color);
     opacity: 1;
     z-index: 1;
-    transition: all var(--default-transition);
-}
-
-@media (min-width: 620px) {
-    .services-items {
-        grid-template-columns: 1fr 1fr;
-    };
-}
-
-@media (min-width: 900px) {
-    .services-items {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-.contacts {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #2b2e29;
-}
-
-.contacts h2 {
-    margin: 0;
-    text-align: center;
-    font-family: 'Poiret One', cursive;
-    font-size: 1.7rem;
-}
-
-.contacts h2::after {
-    content: "";
-    display: block;
-    width: 3.5rem;
-    height: 2px;
-    margin: 5px auto 20px;
-    background-color: var(--text-color);
-    border-radius: 2px;
-}
-
-.contacts form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 90%;
-}
-
-.contacts form input, textarea {
-	display: block;
-	width: 100%;
-	height: 45px;
-    border: none;
-	border-bottom: 1px solid #989997;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1rem;
-	background: transparent;
-    color: var(--text-color);
-    resize: none;
-    transition: border-bottom var(--default-transition);
-}
-
-.contacts form input::placeholder, textarea::placeholder {
-    color: #c1c2c0;
-}
-
-.contacts form input:focus, textarea:focus {
-    border: none;
-    border-bottom: 2px solid var(--text-color);
-    outline: none;
-}
-
-.contacts form textarea {
-    height: 10rem;
-}
-
-.contacts form input.button {
-    text-align: center;
-    border: none;
-    width: 10rem;
-    margin: 15px auto;
-    background-color: #454743;
-    border-radius: 3px;
-    box-shadow: 0 0 8px #222;
-    transition: background-color var(--default-transition);
-}
-
-.contacts form input.button:hover {
-    background-color: var(--orange-color);
-}
-
-.contacts .contacts-info a {
-    color: var(--text-color);
-    text-decoration: none;
-    text-align: center;
-    border-radius: 2px;
-    transition: all var(--default-transition);
-    margin: 0 5px;
-}
-
-.contacts .contacts-info a:hover {
-    color: var(--orange-color);
-}
-
-.contacts .contacts-info a i {
-    font-size: 1.2rem;
-}
-
-.contacts-map {
-    margin-top: 1rem;
-    width: 100%;
-    overflow: hidden;
-}
-
-@media (min-width:620px) {
-    .contacts-map {
-        width: auto;
-    }
+    transition: all var(--main-transition);
 }

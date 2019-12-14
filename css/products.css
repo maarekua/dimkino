@@ -11,19 +11,19 @@
     margin: 0;
 }
 
-.products h2::after,
-.filters h2::after,
-.cart h2::after {
+.products h2:after,
+.filters h2:after,
+.cart h2:after {
     content: "";
     display: block;
     width: 3.5rem;
     height: 2px;
     background-color: var(--text-color);
-    margin: 5px auto 20px;
+    margin: 5px auto 0;
     border-radius: 2px;
 }
 
-.filters h2::after {
+.filters h2:after {
     margin-bottom: 0;
 }
 
@@ -35,12 +35,12 @@
     font-size: 1.3rem;
     border-radius: 3px;
     user-select: none;
-    transition: all var(--orange-color);
+    transition: all var(--event-color);
 }
 
 .filters .filter-icon:hover,
 .filters .sort-btn:hover {
-    color: var(--orange-color);
+    color: var(--event-color);
 }
 
 .filters .filter-btn {
@@ -53,7 +53,7 @@
 }
 
 .filters .filter-btn:checked ~ .filter-icon  {
-    color: var(--orange-color);
+    color: var(--event-color);
 }
 
 .filters .filters-menu {
@@ -61,38 +61,36 @@
     justify-content: center;
     width: 100%;
     max-height: 0;
-    margin-top: 20px;
+    margin-top: 2rem;
     overflow: hidden;
     opacity: 0;
-    box-shadow: inset 0px -10px 10px -10px #111;
-    transition: all var(--default-transition);
+    box-shadow: var(--bottom-shadow);
+    transition: all var(--main-transition);
 }
 
 .filters .filters-menu ul {
     width: 100%;
-    margin: 0;
     margin-bottom: 20px;
-    padding: 0;
     list-style: none;
     text-align: center;
     border-radius: 2px;
 }
 
-.filters .filters-menu .filter-category li a,
-.filters .filters-menu .filter-brand li a {
-    display: block;
+.filters .filters-menu .filter-category li,
+.filters .filters-menu .filter-brand li {
+    cursor: pointer;
     padding: .5rem;
     font-size: .85rem;
     text-decoration: none;
     text-transform: uppercase;
     color: var(--text-color);
     border-radius: 3px;
-    transition: background-color var(--default-transition);
+    transition: background-color var(--main-transition);
 }
 
-.filters .filters-menu .filter-category li a:hover,
-.filters .filters-menu .filter-brand li a:hover {
-    background-color: var(--orange-color);
+.filters .filters-menu .filter-category li:hover,
+.filters .filters-menu .filter-brand li:hover {
+    background-color: var(--event-color);
 }
 
 .filters ul li:first-child {
@@ -112,12 +110,12 @@
 
     .filters .filters-menu ul {
         text-align: left;
-        margin-left: 20px;
+        margin-left: 1.5rem;
         margin-bottom: 0;
     }
 
     .filters .filters-menu ul:last-child {
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
     }
 
     .filters ul li:first-child {
@@ -127,40 +125,43 @@
 }
 
 .products {
-    padding: 20px;
+    padding: 2rem;
     background-image: url('../images/sonusfaber-ilcremonese.jpg');
-    background-position: right;
-    background-size: cover;
+    background-position: cover;
 }
 
 .products .product-items {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 2rem;
+    padding: 2rem 0;
 }
 
 .products .product-items .product-item {
     display: grid;
-    grid-template-rows: 4fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr 1fr;
     background-color: var(--text-color);
     color: var(--main-color);
-    box-shadow: 0 0 15px #111;
+    box-shadow: var(--item-shadow);
     border-radius: 3px;
     overflow: hidden;
-    transition: all var(--default-transition);
+    transition: all var(--main-transition);
+}
+
+.products .product-items .hide {
+    display: none;
 }
 
 .products .product-items .product-item:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 .products .product-items .product-item .product-img-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 200px;
-    background-color: white;
-    box-shadow: inset 0px -12px 15px -10px #111;
+    background-color: #fff;
+    box-shadow: var(--bottom-shadow);
 }
 
 .products .product-items .product-item .product-img-container img {
@@ -170,47 +171,27 @@
 
 .products .product-items .product-item .product-descr {
     width: 100%;
-    padding: 10px 0;
+    padding: .5rem 0;
     background-color: var(--main-color);
     text-align: center;
     color: var(--text-color);
-    
-}
-
-.products .product-items .product-item .product-descr h3 {
-    padding: 0;
-    margin: 0;
-    font-weight: 400;
 }
 
 .products .product-items .product-item .buttons {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: inset 0px 12px 15px -10px #111;
+    box-shadow: var(--top-shadow);
 }
 
 .products .product-items .product-item .buttons i {
-    font-size: 1.5rem;
-    transition: color var(--default-transition);
+    font-size: 1.6rem;
+    transition: color var(--main-transition);
     cursor: pointer;
 }
 
 .products .product-items .product-item .buttons i:hover {
-    font-size: 1.5rem;
-    color: var(--orange-color);
-}
-
-@media (min-width: 620px) {
-    .products .product-items {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (min-width: 900px) {
-    .products .product-items {
-        grid-template-columns: 1fr 1fr 1fr;        
-    }
+    color: var(--event-color);
 }
 
 .cart {
@@ -234,9 +215,12 @@
 }
 
 .cart .cart-item {
-    display: flex;
+    display:flex;
     align-items: center;
+}
 
+.cart .cart-item .cart-item-descr {
+        margin: 0 .3rem;
 }
 
 .cart .cart-items .cart-item-image {
