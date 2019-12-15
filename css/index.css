@@ -9,6 +9,16 @@ header nav {
     transition: background-color var(--main-transition);
 }
 
+header nav ul {
+    background-color: var(--main-transparent-color);
+}
+
+@media (min-width: 760px) {
+    header nav ul {
+        background-color: transparent;
+    }
+}
+
 
 .banner {
     display: flex;

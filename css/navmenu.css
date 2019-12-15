@@ -36,7 +36,7 @@ header nav {
 }
 
 header nav ul {
-    background-color: var(--main-transparent-color);
+    background-color: var(--main-color);
     position: absolute;
     top: 5rem;
     width: 100%;
@@ -176,6 +176,22 @@ header nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     background-color: var(--main-color);
     padding: .7rem;
     width: 100%;
+}
+
+.contacts h2 {
+    font-family: 'Poiret One', cursive;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.contacts h2:after {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 2px;
+    margin: 5px auto 0;
+    background-color: var(--text-color);
+    border-radius: 2px;
 }
 
 .contacts form input, textarea {

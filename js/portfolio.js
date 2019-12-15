@@ -1,16 +1,9 @@
-$(".show").click(function(){
-  $(".test").show('slow');
-});
+const buttonMore = document.querySelector('.big-firstrow');
+const moreInfo = document.querySelector('.test');
 
-$(".test").click(function(){
-  $(".test").hide(350);
-});
-
-$('#manual-ajax').click(function(event) {
-  event.preventDefault();
-  $.get(this.href, function(html) {
-    $(html).appendTo('body').modal({
-        fadeDuration: 300
-    });
-  });
-});
+buttonMore.addEventListener('click', function() {
+    moreInfo.classList.toggle('test-visible');
+})
+moreInfo.addEventListener('click', function() {
+    moreInfo.classList.toggle('test-visible');
+})

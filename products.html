@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/navmenu.css">
     <link rel="stylesheet" href="css/products.css">
     <link rel="icon" href="images/picon.png">
-    <script src="https://kit.fontawesome.com/68324b0018.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -23,7 +22,7 @@
                 <li><a href="portfolio.html">Портфоліо</a></li>
                 <li><a href="services.html">Послуги</a></li>
                 <li><a class="active" href="products.html">Магазин</a></li>
-                <li><a href="contacts.html">Контакти</a></li>
+                <li><a href="contacts.html" id="contacts-btn">Контакти</a></li>
                 <li><a href="#cart"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </nav>
@@ -31,10 +30,13 @@
     <main>
         <section class="filters">
             <h2>Онлайн Магазин</h2>
-            <input class="filter-btn" type="checkbox" id="filter-btn">
-            <label class="filter-icon" for="filter-btn"><i class="class fas fa-filter"></i></label>
-            <i class="fas fa-sort-amount-up sort-btn"></i>
-            <i class="fas fa-sort-alpha-down sort-btn"></i>
+            <div class="filter-buttons">
+                <input class="filter-btn" type="checkbox" id="filter-btn">
+                <label class="filter-icon" for="filter-btn"><i class="class fas fa-filter"></i></label>
+                <i class="fas fa-sort-amount-up sort-btn" id="alphabet"></i>
+                <i class="fas fa-sort-alpha-down sort-btn"></i>
+                <input type="text" class="filter-search" onkeyup="itemSearch()" placeholder="Пошук...">
+            </div>
             <div class="filters-menu">
                 <ul class="filter-category">
                     <li>Категорія:</li>
@@ -83,11 +85,13 @@
             <li><a href="services.html">Послуги</a></li>
             <li><a href="products.html">Магазин</a></li>
             <li><a href="shopping-cart.html">Корзина</a></li>
-            <li><a href="contacts.html">Контакти</a></li>
+            <li><a href="contacts.html" id="contacts-btn">Контакти</a></li>
         </ul>
         <p>© 2019 Markiyan</p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/68324b0018.js" crossorigin="anonymous"></script>
     <script src="js/products.js"></script>
+    <script src="js/contacts.js"></script>
 </body>
 </html>

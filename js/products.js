@@ -1,10 +1,25 @@
+document.getElementById('filter-btn').addEventListener('change', function() {
+  const filtersMenu = document.querySelector('.filters-menu');
+  if (this.checked) {
+    filtersMenu.classList.add('filters-menu-active');
+  } else {
+    filtersMenu.classList.remove('filters-menu-active');
+  }
+});
+
+//document.querySelector('.filter-search').addEventListener('keyup', itemSearch());
+
 function fetchJson() {
   fetch('json/product-items.json')
     .then(response => response.json())
     .then(data => {
       data.products.forEach(item => {
         const productRow = document.createElement('div');
-        productRow.classList.add('product-item', item.filterBrand, item.filterCategory);
+        productRow.classList.add(
+          'product-item',
+          item.filterBrand,
+          item.filterCategory
+        );
         const productItems = document.querySelector('.product-items');
         const productRowContents = `
                   <div class="product-img-container">
@@ -129,18 +144,34 @@ function updateCartTotal() {
   document.querySelector('.cart-total-price').innerText = '$' + total;
 }
 
-$(document).ready(function(){
-    $('.filter-by').click(function(){
-        const category = $(this).attr('id');
-        if(category === 'all') {
-            $('.product-item').addClass('hide');
-            $('.product-item').removeClass('hide');
-        } else {
-            $('.product-item').addClass('hide');
-            $('.' + category).removeClass('hide');
-        }
-    })
-})
+$(document).ready(function() {
+  $('.filter-by').click(function() {
+    const category = $(this).attr('id');
+    if (category === 'all') {
+      $('.product-item').addClass('hide');
+      $('.product-item').removeClass('hide');
+    } else {
+      $('.product-item').addClass('hide');
+      $('.' + category).removeClass('hide');
+    }
+  });
+});
+
+function itemSearch() {
+  searchInput = document.querySelector('.filter-search');
+  searchText = searchInput.value.toUpperCase();
+  const productItem = document.querySelectorAll('.product-item');
+  productItem.forEach(item => {
+    const productModel = item.querySelector('.product-model');
+    const productBrand = item.querySelector('.product-brand');
+    const productSearch = productBrand.innerText + ' ' + productModel.innerText;
+    if (productSearch.toUpperCase().indexOf(searchText) > -1) {
+      item.classList.remove('hide');
+    } else {
+      item.classList.add('hide');
+    }
+  });
+}
 
 //function filterSelection(filterBy) {
 //  if (filterBy == 'all') filterBy = '';
