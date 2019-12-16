@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald|Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Poiret+One|Roboto&display=swap');
 
 :root {
     font-family: 'Oswald', sans-serif;
@@ -232,14 +232,15 @@ header nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     border: none;
     width: 10rem;
     margin: 1rem auto;
-    background-color: #454743;
+    background-color: var(--event-color);
     border-radius: 3px;
-    box-shadow: 0 0 8px #222;
+    box-shadow: var(--item-shadow);
     transition: background-color var(--main-transition);
 }
 
 .contacts form input.button:hover {
-    background-color: var(--event-color);
+    background-color: var(--text-color);
+    color: var(--main-color);
 }
 
 .contacts .contacts-info {
@@ -263,12 +264,6 @@ header nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 
 .contacts .contacts-info a i {
     font-size: 1.2rem;
-}
-
-.contacts-map {
-    margin-top: 1rem;
-    width: 100%;
-    overflow: hidden;
 }
 
 @media (min-width:620px) {

@@ -19,7 +19,6 @@ header nav ul {
     }
 }
 
-
 .banner {
     display: flex;
     flex-direction: column;
@@ -43,7 +42,7 @@ header nav ul {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--text-color);
-    background-color: var(--main-transparent-color);
+    background-color: var(--event-color);
     border: none;
     border-radius: 3px;
     cursor: pointer;
@@ -51,7 +50,8 @@ header nav ul {
 }
 
 .banner .banner-btn:hover {
-    background-color: var(--event-color);
+    background-color: var(--text-color);
+    color: var(--main-color);
 }
 
 @media (min-width: 760px) {
@@ -173,4 +173,13 @@ main .gallery .gallery-item:active {
     opacity: 1;
     z-index: 1;
     transition: all var(--main-transition);
+}
+
+.contacts {
+    width: auto;
+    padding: 1rem;
+}
+
+footer {
+    box-shadow: var(--top-shadow);
 }
