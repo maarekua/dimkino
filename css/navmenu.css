@@ -165,6 +165,7 @@ header nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
         max-height: none;
         padding: .5rem 1rem;
         opacity: 1;
+        z-index: 0;
     }
     
     header nav .menu-icon {
