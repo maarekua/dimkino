@@ -102,7 +102,7 @@
     top:0;
     right:0;
     background-color: var(--main-transparent-color);
-    z-index: 1000;
+    z-index: 2;
     transition: all var(--main-transition);
 }
 
