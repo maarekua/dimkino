@@ -64,27 +64,30 @@ function moreInfoAdd(item) {
     fetch('json/portfolio-descr.json')
         .then(response => response.json())
         .then(data => {
-            const descrInfo = data[item];
-            descrInfo.images.forEach(imgSrc => {
+            const descrData = data[item];
+            descrData.images.forEach(imgSrc => {
                 const image = document.createElement('img')
                 image.src = imgSrc;
-                image.alt = descrInfo.name;
+                image.alt = descrData.name;
                 image.classList.add('descr-image');
                 gallery.append(image);
-                image.addEventListener('click', bigImage)
+                image.addEventListener('click', bigImage);
             })
-            descr.innerText = descrInfo.info;
+            descr.innerText = descrData.info;
             addCarousel();
         });
 }
 
-
+const bigImageContainer = document.querySelector('.big-image');
+bigImageContainer.addEventListener(`click`, () => bigImageContainer.style.display = 'none');
 
 function bigImage () {
-    const bigImageContainer = document.querySelector('.big-image');
+    const imageSrc = this.src;
     while (bigImageContainer.hasChildNodes()) {
         bigImageContainer.removeChild(bigImageContainer.firstChild);
     };
-    bigImageContainer.append(this);
+    const image = document.createElement(`img`);
+    image.src = imageSrc;
+    bigImageContainer.append(image);
     bigImageContainer.style.display = 'block';
 }
