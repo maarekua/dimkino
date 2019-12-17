@@ -3,14 +3,29 @@
     background-image: url('../images/sonusfaber-ilcremonese.jpg');
     background-position: right;
     background-size: cover;
+    background-attachment: fixed;
     box-shadow: var(--top-shadow),
                 var(--bottom-shadow);
 }
 
 .services-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    grid-gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services-items .services-column {
+    flex: 100%;
+}
+
+@media (min-width: 680px) {
+    .services-items .services-column {
+    flex: 50%;
+    }
+}
+@media (min-width: 960px) {
+    .services-items .services-column {
+    flex: 33.333%;
+    }
 }
 
 .services h2 {
@@ -33,7 +48,7 @@
     padding: 2rem 0;
 }
 
-.services .services-item {
+.services .services-image {
     position: relative;
     cursor: pointer;
     background-color: var(--event-color);
@@ -41,16 +56,39 @@
     box-shadow: var(--item-shadow);
     transition: all var(--main-transition);
     overflow: hidden;
+    margin: 0 .5rem;
 }
 
-.services .services-item img {
+.services-items .services-column .services-item .services-descr {
+    margin: 0 .5rem 1rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+    background-color: var(--text-color);
+    color: var(--main-color);
+    border-radius: 0 0 3px 3px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .7s ease;
+    
+}
+
+.services-items .services-column .services-item .services-descr-active {
+    max-height: 30rem;
+    padding: 1rem;
+    margin: 0 .5rem 1rem;
+    opacity: 1;
+    transition: all .7s ease;
+} 
+
+.services .services-image img {
     display: block;
     width: 100%;
     opacity: 1;
     transition: all var(--main-transition);
 }
 
-.services .services-item h3 {
+.services .services-image h3 {
     position: absolute;
     top:50%;
     transform: translate(0, -50%);
@@ -68,14 +106,14 @@
     transition: all var(--main-transition);
 }
 
-.services .services-item:hover {
+.services .services-image:hover {
     transform: scale(1.01);
 }
 
-.services .services-item:hover img{
+.services .services-image:hover img{
     opacity: 0.3;
 }
 
-.services .services-item:hover h3 {
+.services .services-image:hover h3 {
     background: none;
 }

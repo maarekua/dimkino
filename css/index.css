@@ -92,6 +92,7 @@ header .banner .banner-btn:hover {
 }
 
 .about p {
+    font-size: 1.1rem;
     padding: 1rem 0;
 }
 
@@ -110,69 +111,10 @@ main .gallery .gallery-item:active {
     main .gallery .gallery-item {
         max-height: 16rem;
     }
-    
 }
 
 .services {
-    box-shadow: var(--top-shadow),
-                var(--bottom-shadow);
-    padding: 2rem 1.5rem;
-}
-
-.services-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.services .services-item {
-    position: relative;
-    background-color: var(--event-color);
-    border-radius: 3px;
-    box-shadow: var(--item-shadow);
-    cursor: pointer;
-    transition: all var(--main-transition);
-}
-
-.services .services-item:hover {
-    transform: scale(1.01);
-}
-
-.services .services-item:hover img{
-    opacity: 0.3;
-}
-
-.services .services-item:hover h3 {
-    background: transparent;
-}
-
-.services .services-item img {
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    opacity: 1;
-    transition: all var(--main-transition);
-    border-radius: 3px;
-}
-
-.services .services-item h3 {
-    position: absolute;
-    top:50%;
-    transform: translate(0, -50%);
-    width: 100%;
-    padding: 20px 0;
-    margin: 0;
-    font-family: 'Poiret One', cursive;
-    font-size: 1.6rem;
-    text-align: center;
-    text-decoration: none;
-    color: var(--text-color);
-    background-color: var(--main-transparent-color);
-    opacity: 1;
-    z-index: 1;
-    transition: all var(--main-transition);
+    background: none;
 }
 
 .contacts {
