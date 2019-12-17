@@ -255,7 +255,6 @@ header nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     transition: all var(--main-transition);
     margin: .5rem;
     white-space: nowrap;
-
 }
 
 .contacts .contacts-info a:hover {
@@ -264,12 +263,6 @@ header nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 
 .contacts .contacts-info a i {
     font-size: 1.2rem;
-}
-
-@media (min-width:620px) {
-    .contacts-map {
-        width: auto;
-    }
 }
 
 footer { 
