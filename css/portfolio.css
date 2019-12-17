@@ -143,11 +143,26 @@
     padding: 20px;
 }
 
+.portfolio-item-descr .portfolio-descr-inner .gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 1rem auto;
+}
+
 .portfolio-item-descr .portfolio-descr-inner .gallery img {
+    cursor: pointer;
     display: block;
     width: auto;
-    max-height: 20rem;
-    margin: 1rem auto;
+    max-height: 10rem;
+    margin: .5rem;
+    box-shadow: var(--item-shadow);
+    transition: all var(--main-transition);
+}
+
+.portfolio-item-descr .portfolio-descr-inner .gallery img:hover {
+    transform: scale(1.2);
 }
 
 .big-image {

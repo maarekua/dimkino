@@ -1,58 +1,27 @@
-const buttonMore = document.querySelector('.big-firstrow');
 const moreInfo = document.querySelector('.portfolio-item-descr');
 const closeButton = document.querySelector('.button-btn');
 
-buttonMore.addEventListener('click', function () {
-    moreInfo.classList.toggle('test-visible');
-})
 closeButton.addEventListener('click', function () {
     moreInfo.classList.toggle('test-visible');
 })
 
-function addCarousel () {
-    const owl = $('.gallery');
-    owl.owlCarousel({
-        items: 1,
-        loop: true,
-        center: true,
-        dots: false,
-        autoWidth: true,
-        animateOut: 'fadeOutLeft',
-        animateIn: 'fadeinLeft',
-        autoplay: true,
-        autoplayTimeout: 2500,
-        autoplayHoverPause: true,
-        margin: 10,
-        marge: true,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 3,
-                nav: false
-            },
-            750: {
-                items: 5,
-                nav: false
-            }
-        }
-    });
-}
-
-
-document.querySelector('.portfolio-item')
-    .addEventListener('click', moreInfoOpen);
+document.querySelectorAll('.portfolio-item')
+    .forEach(item => 
+        item.addEventListener('click', moreInfoOpen)
+    )
 
 const gallery = document.querySelector('.gallery');
 function moreInfoOpen() {
     const itemData = this.getAttribute('data');
     const galleryData = gallery.getAttribute('data');
     if (itemData !== galleryData) {
-        console.log('start')
-        moreInfoAdd(itemData)
+        moreInfoAdd(itemData);
+        moreInfo.classList.toggle('test-visible');
     } else {
-        console.log('stop')
+        moreInfo.classList.toggle('test-visible');
         return
     }
+    
 }
 
 function moreInfoAdd(item) {
@@ -74,7 +43,6 @@ function moreInfoAdd(item) {
                 image.addEventListener('click', bigImage);
             })
             descr.innerText = descrData.info;
-            addCarousel();
         });
 }
 
