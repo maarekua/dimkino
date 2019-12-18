@@ -152,8 +152,10 @@
 
 .products {
     padding: 2rem;
-    background-image: url('../images/sonusfaber-ilcremonese.jpg');
-    background-position: cover;
+    background-image: url('../images/sonusfaber-ilcremonese.webp');
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .products .product-items {
