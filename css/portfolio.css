@@ -173,7 +173,8 @@
     transform: scale(1.1);
 }
 
-.full-screen {
+.full-screen,
+.modal-contacts {
   display: none;
   position: fixed;
   z-index: 1;
@@ -204,6 +205,11 @@
     .full-screen img {
         max-height: 90%;
         width: auto;
+    }
+
+    .modal-contacts .contacts {
+        max-width: 980px;
+        margin: auto;
     }
 }
 

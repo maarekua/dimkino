@@ -59,3 +59,26 @@ function fullScreen() {
   fullScreenContainer.append(image);
   fullScreenContainer.style.display = 'block';
 }
+
+document.querySelector('.contacts-btn').addEventListener('click', showContacts)
+
+function showContacts() {
+    const modalContacts = document.querySelector('.modal-contacts')
+    console.log(modalContacts)
+  fetch('contacts.html')
+    .then(response => response.text())
+    .then(contacts => {
+        console.log(contacts)
+        if (modalContacts.hasChildNodes()) {
+            console.log('nope')
+            modalContacts.style.display = 'block';
+            return;
+        } else {
+            console.log('yeap')
+            modalContacts.innerHTML = contacts;
+            document.querySelector('.close-contacts')
+                .addEventListener('click', () => modalContacts.style.display = 'none');
+            modalContacts.style.display = 'block';
+        }
+        });
+}
