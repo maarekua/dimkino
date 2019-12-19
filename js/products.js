@@ -7,43 +7,133 @@ document.getElementById('filter-btn').addEventListener('change', function() {
   }
 });
 
-//document.querySelector('.filter-search').addEventListener('keyup', itemSearch());
+const sortByPriceBtn = document.querySelector('.sort-price');
 
-function fetchJson() {
+sortByPriceBtn.addEventListener('click', () => {
+  if (sortByPriceBtn.classList.contains('fa-sort-amount-up')) {
+    sortByPriceBtn.classList.replace(
+      'fa-sort-amount-up',
+      'fa-sort-amount-down'
+    );
+    renderer('priceMax');
+  } else {
+    sortByPriceBtn.classList.replace(
+      'fa-sort-amount-down',
+      'fa-sort-amount-up'
+    );
+    renderer('priceMin');
+  }
+});
+
+const sortByBrandBtn = document.querySelector('.sort-brand');
+
+sortByBrandBtn.addEventListener('click', () => {
+  if (sortByBrandBtn.classList.contains('fa-sort-alpha-up')) {
+    sortByBrandBtn.classList.replace(
+      'fa-sort-alpha-up',
+      'fa-sort-alpha-down'
+    );
+    renderer('brandMax');
+  } else {
+    sortByBrandBtn.classList.replace(
+      'fa-sort-alpha-down',
+      'fa-sort-alpha-up'
+    );
+    renderer('brandMin');
+  }
+});
+
+document.querySelector('.filter-search').addEventListener('keyup', itemSearch);
+
+renderer();
+
+function sortOptions(sort, products) {
+  if (sort === 'priceMin') {
+    products.sort((a, b) => a.price - b.price);
+  }
+  if (sort === 'priceMax') {
+    products.sort((a, b) => b.price - a.price);
+  }
+  if (sort === 'brandMax') {
+    products.sort(function(a, b) {
+      const x = a.brand.toLowerCase();
+      const y = b.brand.toLowerCase();
+      if (x < y) {
+        return -1;
+      }
+      if (x > y) {
+        return 1;
+      }
+      return 0;
+    });
+  }
+  if (sort === 'brandMin') {
+    products.sort(function(a, b) {
+      const x = a.brand.toLowerCase();
+      const y = b.brand.toLowerCase();
+      if (x < y) {
+        return 1;
+      }
+      if (x > y) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+}
+
+function renderer(sort) {
   fetch('json/product-items.json')
-    .then(response => response.json())
-    .then(data => {
-      data.products.forEach(item => {
-        const productRow = document.createElement('div');
-        productRow.classList.add(
-          'product-item',
-          item.filterBrand,
-          item.filterCategory
-        );
-        const productItems = document.querySelector('.product-items');
-        const productRowContents = `
-                  <div class="product-img-container">
-                      <img class="product-img" src="images/products/${item.imgName}" alt="${item.category} - ${item.brand} - ${item.model}">
-                  </div>
-                  <div class="product-descr">
-                      <p class="product-category">${item.category}</p>
-                      <p class="product-brand">${item.brand}</p>
-                      <p class="product-model">${item.model}</p>
-                  </div>
-                  <div class="buttons">
-                      <span class="product-price">$${item.price}</span>
-                      <i class="fas fa-cart-plus product-add-cart"></i>
-                  </div>`;
-        productRow.innerHTML = productRowContents;
-        productItems.append(productRow);
-        productRow
-          .querySelector('.product-add-cart')
-          .addEventListener('click', addToCart);
-      });
+    .then(result => result.json())
+    .then(products => {
+      if (sort !== undefined) {
+        sortOptions(sort, products);
+      }
+      clearProductList();
+      renderProducts(products);
+      addEventListeners();
     });
 }
 
-fetchJson();
+const productsContainer = document.querySelector('.product-items');
+
+function clearProductList() {
+  while (productsContainer.hasChildNodes()) {
+    productsContainer.removeChild(productsContainer.firstChild);
+  }
+}
+
+function sortProduct() {
+  renderProducts();
+}
+
+function renderProducts(products) {
+  let productRowContents = '';
+  products.forEach(product => {
+    productRowContents += `
+                  <div class="product-item" data-filter="${product.category} ${product.brand} ${product.model}" data-price="${product.price}">
+                    <div class="product-img-container">
+                        <img class="product-img" src="images/products/${product.imgName}" alt="${product.category} - ${product.brand} - ${product.model}">
+                    </div>
+                    <div class="product-descr">
+                        <p class="product-category">${product.category}</p>
+                        <p class="product-brand">${product.brand}</p>
+                        <p class="product-model">${product.model}</p>
+                    </div>
+                    <div class="buttons">
+                        <span class="product-price">$${product.price}</span>
+                        <i class="fas fa-cart-plus product-add-cart"></i>
+                    </div>
+                  </div>`;
+  });
+  productsContainer.innerHTML = productRowContents;
+}
+
+function addEventListeners() {
+  document
+    .querySelectorAll('.product-add-cart')
+    .forEach(item => item.addEventListener('click', addToCart));
+}
 
 document
   .querySelector('.cart-purchase-button')
@@ -107,18 +197,18 @@ function addProductToCart(imageSrc, imageAlt, brand, model, price) {
     }
   }
   const cartRowContents = `
-      <div class="cart-item cart-column">
-          <img class="cart-item-image" src="${imageSrc}" alt="${imageAlt}" width="100" height="100">
-          <div class="cart-item-descr">
-              <p class="cart-item-brand">${brand}</p>
-              <p class="cart-item-model">${model}</p>
-          </div>
-      </div>
-      <span class="cart-price cart-column">${price}</span>
-      <div class="cart-quantity cart-column">
-          <input class="cart-quantity-input" type="number" value="1">
-          <i class="fas fa-minus cart-item-remove"></i>
-      </div>`;
+        <div class="cart-item cart-column">
+            <img class="cart-item-image" src="${imageSrc}" alt="${imageAlt}" width="100" height="100">
+            <div class="cart-item-descr">
+                <p class="cart-item-brand">${brand}</p>
+                <p class="cart-item-model">${model}</p>
+            </div>
+        </div>
+        <span class="cart-price cart-column">${price}</span>
+        <div class="cart-quantity cart-column">
+            <input class="cart-quantity-input" type="number" value="1">
+            <i class="fas fa-minus cart-item-remove"></i>
+        </div>`;
   cartRow.innerHTML = cartRowContents;
   cartItems.append(cartRow);
   cartRow
@@ -144,27 +234,14 @@ function updateCartTotal() {
   document.querySelector('.cart-total-price').innerText = '$' + total;
 }
 
-$(document).ready(function() {
-  $('.filter-by').click(function() {
-    const category = $(this).attr('id');
-    if (category === 'all') {
-      $('.product-item').addClass('hide');
-      $('.product-item').removeClass('hide');
-    } else {
-      $('.product-item').addClass('hide');
-      $('.' + category).removeClass('hide');
-    }
-  });
-});
-
 function itemSearch() {
   searchInput = document.querySelector('.filter-search');
   searchText = searchInput.value.toUpperCase();
   const productItem = document.querySelectorAll('.product-item');
   productItem.forEach(item => {
-    const productModel = item.querySelector('.product-model');
-    const productBrand = item.querySelector('.product-brand');
-    const productSearch = productBrand.innerText + ' ' + productModel.innerText;
+    const productModel = item.getAttribute('data-model');
+    const productBrand = item.getAttribute('data-brand');
+    const productSearch = productBrand + ' ' + productModel;
     if (productSearch.toUpperCase().indexOf(searchText) > -1) {
       item.classList.remove('hide');
     } else {
@@ -202,3 +279,5 @@ function itemSearch() {
 //  }
 //  element.className = itemClasses.join(' ');
 //}
+
+

@@ -1,311 +1,308 @@
-{
-    "products": 
-        [
-            {
-                "category": "Акустика",
-                "filterCategory": "speakers",
-                "brand": "Wilson Audio",
-                "filterBrand": "wilson-audio",
-                "model": "Сhronosonic-XVX",
-                "price": 850000,
-                "imgName": "wilson-audio/chronosonic-xvx.jpg"
-            },
-            {   
-                "category": "Акустика",
-                "filterCategory": "speakers",
-                "brand": "Wilson Audio",
-                "filterBrand": "wilson-audio",
-                "model": "Alexandria-XLF",
-                "price": 210000,
-                "imgName": "wilson-audio/alexandria-xlf.jpg"
-            },
-            {
-                "category": "Акустика",
-                "filterCategory": "speakers",
-                "brand": "Wilson Audio",
-                "filterBrand": "wilson-audio",
-                "model": "Alexx",
-                "price": 135000,
-                "imgName": "wilson-audio/alexx.jpg"
-            },
-            {
-                "category": "Акустика",
-                "filterCategory": "speakers",
-                "brand": "Wilson Audio",
-                "filterBrand": "wilson-audio",
-                "model": "Alexia",
-                "price": 92000,
-                "imgName": "wilson-audio/alexia-series-2.jpg"
-            },
-            {   
-                "category": "Акустика",
-                "filterCategory": "speakers",
-                "brand": "Wilson Audio",
-                "filterBrand": "wilson-audio",
-                "model": "Sasha DAW",
-                "price": 48000,
-                "imgName": "wilson-audio/sasha-daw.jpg"
-            },
-            {
-                "category": "Акустика",
-                "filterCategory": "speakers",
-                "brand": "Wilson Audio",
-                "filterBrand": "wilson-audio",
-                "model": "Yvette",
-                "price": 25500,
-                "imgName": "wilson-audio/yvette.jpg"
-            },
-            {
-                "category": "Акустика",
-                "filterCategory": "speakers",
-                "brand": "Wilson Audio",
-                "filterBrand": "wilson-audio",
-                "model": "Sabrina",
-                "price": 15900,
-                "imgName": "wilson-audio/sabrina.jpg"
-            },
-            {
-                "category": "Акустика",
-                "filterCategory": "speakers",
-                "brand": "Sonus Faber",
-                "filterBrand": "sonus-faber",
-                "model": "Lilium",
-                "price": 72000,
-                "imgName": "sonus-faber/lilium.jpg"
-            },
-            {
-                "category": "Акустика",
-                "filterCategory": "speakers",
-                "brand": "Sonus Faber",
-                "filterBrand": "sonus-faber",
-                "model": "Il Cremonese",
-                "price": 48000,
-                "imgName": "sonus-faber/il-cremonese.jpg"
-            },
-            {
-                "category": "Акустика",
-                "filterCategory": "speakers",
-                "brand": "Sonus Faber",
-                "filterBrand": "sonus-faber",
-                "model": "Amati Tradition",
-                "price": 27000,
-                "imgName": "sonus-faber/amati-tradition.jpg"
-            },
-            {
-                "category": "Акустика",
-                "filterCategory": "speakers",
-                "brand": "Sonus Faber",
-                "filterBrand": "sonus-faber",
-                "model": "Amati Tradition",
-                "price": 19800,
-                "imgName": "sonus-faber/serafino-tradition.jpg"
-            },
-            {
-                "category": "Акустика",
-                "filterCategory": "speakers",
-                "brand": "Sonus Faber",
-                "filterBrand": "sonus-faber",
-                "model": "Olympica Nova",
-                "price": 13800,
-                "imgName": "sonus-faber/olympica-nova.jpg"
-            },
-            {
-                "category": "Акустика",
-                "filterCategory": "speakers",
-                "brand": "Sonus Faber",
-                "filterBrand": "sonus-faber",
-                "model": "Sonetto VIII",
-                "price": 6500,
-                "imgName": "sonus-faber/sonetto-8.jpg"
-            },
-            {
-                "category": "Попередній підсилювач",
-                "filterCategory": "pre-amp",
-                "brand": "Dan d'Agostino",
-                "filterBrand": "dan-d-agostino",
-                "model": "Progression PreAMP",
-                "price": 22000,
-                "imgName": "dan-d-agostino/progression-pre-amp.jpg"
-            },
-            {
-                "category": "Підсилювач",
-                "filterCategory": "amps",
-                "brand": "Dan d'Agostino",
-                "filterBrand": "dan-d-agostino",
-                "model": "Progression Mono AMP",
-                "price": 22500,
-                "imgName": "dan-d-agostino/progression-mono-amp.jpg"
-            },
-            {
-                "category": "Попередній підсилювач",
-                "filterCategory": "pre-amp",
-                "brand": "Dan d'Agostino",
-                "filterBrand": "dan-d-agostino",
-                "model": "Momentum HD PreAMP",
-                "price": 40000,
-                "imgName": "dan-d-agostino/momentum_hd_preamp.jpg"
-            },
-            {
-                "category": "Підсилювач",
-                "filterCategory": "amps",
-                "brand": "Dan d'Agostino",
-                "filterBrand": "dan-d-agostino",
-                "model": "Momentum M400",
-                "price": 32500,
-                "imgName": "dan-d-agostino/momentum-m400.jpg"
-            },
-            {
-                "category": "Підсилювач",
-                "filterCategory": "amps",
-                "brand": "Dan d'Agostino",
-                "filterBrand": "dan-d-agostino",
-                "model": "Momentum Stereo250",
-                "price": 30000,
-                "imgName": "dan-d-agostino/momentum-stereo-250.jpg"
-            },
-            {
-                "category": "Попередній підсилювач",
-                "filterCategory": "pre-amp",
-                "brand": "McIntosh",
-                "filterBrand": "mcintosh",
-                "model": "C1100",
-                "price": 18000,
-                "imgName": "mcintosh/c-1100.jpg"
-            },
-            {
-                "category": "Попередній підсилювач",
-                "filterCategory": "pre-amp",
-                "brand": "McIntosh",
-                "filterBrand": "mcintosh",
-                "model": "C53",
-                "price": 12000,
-                "imgName": "mcintosh/c-53.jpg"
-            },
-            {
-                "category": "Підсилювач",
-                "filterCategory": "amps",
-                "brand": "McIntosh",
-                "filterBrand": "mcintosh",
-                "model": "MC1.25KW",
-                "price": 12000,
-                "imgName": "mcintosh/mc-125kw.jpg"
-            },
-            {
-                "category": "Підсилювач",
-                "filterCategory": "amps",
-                "brand": "McIntosh",
-                "filterBrand": "mcintosh",
-                "model": "MC901",
-                "price": 17500,
-                "imgName": "mcintosh/mc-901.jpg"
-            },
-            {
-                "category": "Підсилювач",
-                "filterCategory": "amps",
-                "brand": "McIntosh",
-                "filterBrand": "mcintosh",
-                "model": "MC2301",
-                "price": 15500,
-                "imgName": "mcintosh/mc-2301.jpg"
-            },
-            {
-                "category": "Підсилювач",
-                "filterCategory": "amps",
-                "brand": "McIntosh",
-                "filterBrand": "mcintosh",
-                "model": "MC255",
-                "price": 10500,
-                "imgName": "mcintosh/mc-255.jpg"
-            },
-            {
-                "category": "Мережевий плеєр",
-                "filterCategory": "network-player",
-                "brand": "dCS",
-                "filterBrand": "dcs",
-                "model": "Vivaldi DAC",
-                "price": 34000,
-                "imgName": "dcs/vivaldi-dac.jpg"
-            },
-            {
-                "category": "Мережевий плеєр",
-                "filterCategory": "network-player",
-                "brand": "dCS",
-                "filterBrand": "dcs",
-                "model": "Rossini DAC",
-                "price": 21500,
-                "imgName": "dcs/rossini-dac.jpg"
-            },
-            {
-                "category": "Мережевий плеєр",
-                "filterCategory": "network-player",
-                "brand": "dCS",
-                "filterBrand": "dcs",
-                "model": "Bartok DAC",
-                "price": 13500,
-                "imgName": "dcs/bartok-dac.jpg"
-            },
-            {
-                "category": "Телевізор",
-                "filterCategory": "tv",
-                "brand": "Loewe",
-                "filterBrand": "loewe",
-                "model": "7.77",
-                "price": 16500,
-                "imgName": "loewe/bild-7-77.jpg"
-            },
-            {
-                "category": "Телевізор",
-                "filterCategory": "tv",
-                "brand": "Loewe",
-                "filterBrand": "loewe",
-                "model": "5.55",
-                "price": 4800,
-                "imgName": "loewe/bild-5-55.jpg"
-            },
-            {
-                "category": "Телевізор",
-                "filterCategory": "tv",
-                "brand": "Loewe",
-                "filterBrand": "loewe",
-                "model": "3.55",
-                "price": 2850,
-                "imgName": "loewe/bild-3-55.jpg"
-            },
-            {
-                "category": "Проектор",
-                "filterCategory": "projector",
-                "brand": "JVC",
-                "filterBrand": "jvc",
-                "model": "RS-3000",
-                "price": 15850,
-                "imgName": "jvc/dla-rs-3000.jpg"
-            },
-            {
-                "category": "Проектор",
-                "filterCategory": "projector",
-                "brand": "JVC",
-                "filterBrand": "jvc",
-                "model": "RS-2000",
-                "price": 10000,
-                "imgName": "jvc/dla-rs-1000-2000.jpg"
-            },
-            {
-                "category": "Проектор",
-                "filterCategory": "projector",
-                "brand": "JVC",
-                "filterBrand": "jvc",
-                "model": "RS-1000",
-                "price": 5999,
-                "imgName": "jvc/dla-rs-1000-2000.jpg"
-            },
-            {
-                "category": "Проектор",
-                "filterCategory": "projector",
-                "brand": "JVC",
-                "filterBrand": "jvc",
-                "model": "RS-540",
-                "price": 5299,
-                "imgName": "jvc/dla-rs-540.jpg"
-            }
-        ]
-}
+[
+    {
+        "category": "Акустика",
+        "filterCategory": "speakers",
+        "brand": "Wilson Audio",
+        "filterBrand": "wilson-audio",
+        "model": "Сhronosonic-XVX",
+        "price": 850000,
+        "imgName": "wilson-audio/chronosonic-xvx.jpg"
+    },
+    {   
+        "category": "Акустика",
+        "filterCategory": "speakers",
+        "brand": "Wilson Audio",
+        "filterBrand": "wilson-audio",
+        "model": "Alexandria-XLF",
+        "price": 210000,
+        "imgName": "wilson-audio/alexandria-xlf.jpg"
+    },
+    {
+        "category": "Акустика",
+        "filterCategory": "speakers",
+        "brand": "Wilson Audio",
+        "filterBrand": "wilson-audio",
+        "model": "Alexx",
+        "price": 135000,
+        "imgName": "wilson-audio/alexx.jpg"
+    },
+    {
+        "category": "Акустика",
+        "filterCategory": "speakers",
+        "brand": "Wilson Audio",
+        "filterBrand": "wilson-audio",
+        "model": "Alexia",
+        "price": 92000,
+        "imgName": "wilson-audio/alexia-series-2.jpg"
+    },
+    {   
+        "category": "Акустика",
+        "filterCategory": "speakers",
+        "brand": "Wilson Audio",
+        "filterBrand": "wilson-audio",
+        "model": "Sasha DAW",
+        "price": 48000,
+        "imgName": "wilson-audio/sasha-daw.jpg"
+    },
+    {
+        "category": "Акустика",
+        "filterCategory": "speakers",
+        "brand": "Wilson Audio",
+        "filterBrand": "wilson-audio",
+        "model": "Yvette",
+        "price": 25500,
+        "imgName": "wilson-audio/yvette.jpg"
+    },
+    {
+        "category": "Акустика",
+        "filterCategory": "speakers",
+        "brand": "Wilson Audio",
+        "filterBrand": "wilson-audio",
+        "model": "Sabrina",
+        "price": 15900,
+        "imgName": "wilson-audio/sabrina.jpg"
+    },
+    {
+        "category": "Акустика",
+        "filterCategory": "speakers",
+        "brand": "Sonus Faber",
+        "filterBrand": "sonus-faber",
+        "model": "Lilium",
+        "price": 72000,
+        "imgName": "sonus-faber/lilium.jpg"
+    },
+    {
+        "category": "Акустика",
+        "filterCategory": "speakers",
+        "brand": "Sonus Faber",
+        "filterBrand": "sonus-faber",
+        "model": "Il Cremonese",
+        "price": 48000,
+        "imgName": "sonus-faber/il-cremonese.jpg"
+    },
+    {
+        "category": "Акустика",
+        "filterCategory": "speakers",
+        "brand": "Sonus Faber",
+        "filterBrand": "sonus-faber",
+        "model": "Amati Tradition",
+        "price": 27000,
+        "imgName": "sonus-faber/amati-tradition.jpg"
+    },
+    {
+        "category": "Акустика",
+        "filterCategory": "speakers",
+        "brand": "Sonus Faber",
+        "filterBrand": "sonus-faber",
+        "model": "Amati Tradition",
+        "price": 19800,
+        "imgName": "sonus-faber/serafino-tradition.jpg"
+    },
+    {
+        "category": "Акустика",
+        "filterCategory": "speakers",
+        "brand": "Sonus Faber",
+        "filterBrand": "sonus-faber",
+        "model": "Olympica Nova",
+        "price": 13800,
+        "imgName": "sonus-faber/olympica-nova.jpg"
+    },
+    {
+        "category": "Акустика",
+        "filterCategory": "speakers",
+        "brand": "Sonus Faber",
+        "filterBrand": "sonus-faber",
+        "model": "Sonetto VIII",
+        "price": 6500,
+        "imgName": "sonus-faber/sonetto-8.jpg"
+    },
+    {
+        "category": "Попередній підсилювач",
+        "filterCategory": "pre-amp",
+        "brand": "Dan d'Agostino",
+        "filterBrand": "dan-d-agostino",
+        "model": "Progression PreAMP",
+        "price": 22000,
+        "imgName": "dan-d-agostino/progression-pre-amp.jpg"
+    },
+    {
+        "category": "Підсилювач",
+        "filterCategory": "amps",
+        "brand": "Dan d'Agostino",
+        "filterBrand": "dan-d-agostino",
+        "model": "Progression Mono AMP",
+        "price": 22500,
+        "imgName": "dan-d-agostino/progression-mono-amp.jpg"
+    },
+    {
+        "category": "Попередній підсилювач",
+        "filterCategory": "pre-amp",
+        "brand": "Dan d'Agostino",
+        "filterBrand": "dan-d-agostino",
+        "model": "Momentum HD PreAMP",
+        "price": 40000,
+        "imgName": "dan-d-agostino/momentum_hd_preamp.jpg"
+    },
+    {
+        "category": "Підсилювач",
+        "filterCategory": "amps",
+        "brand": "Dan d'Agostino",
+        "filterBrand": "dan-d-agostino",
+        "model": "Momentum M400",
+        "price": 32500,
+        "imgName": "dan-d-agostino/momentum-m400.jpg"
+    },
+    {
+        "category": "Підсилювач",
+        "filterCategory": "amps",
+        "brand": "Dan d'Agostino",
+        "filterBrand": "dan-d-agostino",
+        "model": "Momentum Stereo250",
+        "price": 30000,
+        "imgName": "dan-d-agostino/momentum-stereo-250.jpg"
+    },
+    {
+        "category": "Попередній підсилювач",
+        "filterCategory": "pre-amp",
+        "brand": "McIntosh",
+        "filterBrand": "mcintosh",
+        "model": "C1100",
+        "price": 18000,
+        "imgName": "mcintosh/c-1100.jpg"
+    },
+    {
+        "category": "Попередній підсилювач",
+        "filterCategory": "pre-amp",
+        "brand": "McIntosh",
+        "filterBrand": "mcintosh",
+        "model": "C53",
+        "price": 12000,
+        "imgName": "mcintosh/c-53.jpg"
+    },
+    {
+        "category": "Підсилювач",
+        "filterCategory": "amps",
+        "brand": "McIntosh",
+        "filterBrand": "mcintosh",
+        "model": "MC1.25KW",
+        "price": 12000,
+        "imgName": "mcintosh/mc-125kw.jpg"
+    },
+    {
+        "category": "Підсилювач",
+        "filterCategory": "amps",
+        "brand": "McIntosh",
+        "filterBrand": "mcintosh",
+        "model": "MC901",
+        "price": 17500,
+        "imgName": "mcintosh/mc-901.jpg"
+    },
+    {
+        "category": "Підсилювач",
+        "filterCategory": "amps",
+        "brand": "McIntosh",
+        "filterBrand": "mcintosh",
+        "model": "MC2301",
+        "price": 15500,
+        "imgName": "mcintosh/mc-2301.jpg"
+    },
+    {
+        "category": "Підсилювач",
+        "filterCategory": "amps",
+        "brand": "McIntosh",
+        "filterBrand": "mcintosh",
+        "model": "MC255",
+        "price": 10500,
+        "imgName": "mcintosh/mc-255.jpg"
+    },
+    {
+        "category": "Мережевий плеєр",
+        "filterCategory": "network-player",
+        "brand": "dCS",
+        "filterBrand": "dcs",
+        "model": "Vivaldi DAC",
+        "price": 34000,
+        "imgName": "dcs/vivaldi-dac.jpg"
+    },
+    {
+        "category": "Мережевий плеєр",
+        "filterCategory": "network-player",
+        "brand": "dCS",
+        "filterBrand": "dcs",
+        "model": "Rossini DAC",
+        "price": 21500,
+        "imgName": "dcs/rossini-dac.jpg"
+    },
+    {
+        "category": "Мережевий плеєр",
+        "filterCategory": "network-player",
+        "brand": "dCS",
+        "filterBrand": "dcs",
+        "model": "Bartok DAC",
+        "price": 13500,
+        "imgName": "dcs/bartok-dac.jpg"
+    },
+    {
+        "category": "Телевізор",
+        "filterCategory": "tv",
+        "brand": "Loewe",
+        "filterBrand": "loewe",
+        "model": "7.77",
+        "price": 16500,
+        "imgName": "loewe/bild-7-77.jpg"
+    },
+    {
+        "category": "Телевізор",
+        "filterCategory": "tv",
+        "brand": "Loewe",
+        "filterBrand": "loewe",
+        "model": "5.55",
+        "price": 4800,
+        "imgName": "loewe/bild-5-55.jpg"
+    },
+    {
+        "category": "Телевізор",
+        "filterCategory": "tv",
+        "brand": "Loewe",
+        "filterBrand": "loewe",
+        "model": "3.55",
+        "price": 2850,
+        "imgName": "loewe/bild-3-55.jpg"
+    },
+    {
+        "category": "Проектор",
+        "filterCategory": "projector",
+        "brand": "JVC",
+        "filterBrand": "jvc",
+        "model": "RS-3000",
+        "price": 15850,
+        "imgName": "jvc/dla-rs-3000.jpg"
+    },
+    {
+        "category": "Проектор",
+        "filterCategory": "projector",
+        "brand": "JVC",
+        "filterBrand": "jvc",
+        "model": "RS-2000",
+        "price": 10000,
+        "imgName": "jvc/dla-rs-1000-2000.jpg"
+    },
+    {
+        "category": "Проектор",
+        "filterCategory": "projector",
+        "brand": "JVC",
+        "filterBrand": "jvc",
+        "model": "RS-1000",
+        "price": 5999,
+        "imgName": "jvc/dla-rs-1000-2000.jpg"
+    },
+    {
+        "category": "Проектор",
+        "filterCategory": "projector",
+        "brand": "JVC",
+        "filterBrand": "jvc",
+        "model": "RS-540",
+        "price": 5299,
+        "imgName": "jvc/dla-rs-540.jpg"
+    }
+]

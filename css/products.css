@@ -32,7 +32,7 @@
     display: inline-block;
     margin-left: 20px;
     cursor: pointer;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     border-radius: 3px;
     user-select: none;
     transition: all var(--event-color);
@@ -43,7 +43,8 @@
     color: var(--event-color);
 }
 
-.filters .filter-btn {
+.filters .filter-btn,
+.filters-menu input {
     display: none;
 }
 
@@ -51,9 +52,12 @@
     color: var(--event-color);
 }
 
+
+
 .filters .filters-menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex: 50%;
     width: 100%;
     max-height: 0;
     margin-top: 2rem;
@@ -65,24 +69,38 @@
 
 
 .filters .filters-menu-active {
-    max-height: 30rem;
+    max-height: 50rem;
     opacity: 1;
     transition: all var(--main-transition);
 }
     
-
-.filters .filters-menu ul {
-    width: 100%;
-    margin-bottom: 20px;
-    list-style: none;
-    text-align: center;
-    border-radius: 2px;
+.filters .filters-menu .filter-category,
+.filters .filters-menu .filter-brand {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
 }
 
-.filters .filters-menu .filter-category li,
-.filters .filters-menu .filter-brand li {
+.filters .filters-menu span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 10rem;
+    max-width: 10rem;
+}
+
+.filters .filters-menu .filter-category label,
+.filters .filters-menu .filter-brand label {
     cursor: pointer;
-    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 3rem;
+    min-width: 10rem;
+    max-width: 10rem;
+    margin-top: .5rem;
     font-size: .85rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -91,15 +109,13 @@
     transition: background-color var(--main-transition);
 }
 
-.filters .filters-menu .filter-category li:hover,
-.filters .filters-menu .filter-brand li:hover {
+.filters .filters-menu input[type=checkbox]:checked + label {
     background-color: var(--event-color);
 }
 
-.filters ul li:first-child {
-    border-bottom: 1px solid var(--text-color);
-    padding: 8px 0;
-    text-transform: uppercase;
+.filters .filters-menu .filter-category label:hover,
+.filters .filters-menu .filter-brand label:hover {
+    background-color: var(--event-color);
 }
 
 .filters .filter-buttons {
@@ -117,27 +133,33 @@
 }
 
 @media (min-width: 768px) {
-    .filters .filters-menu ul li {
-        display: inline-block;
-    }
-
     .filters .filters-menu {
         flex-direction: column;
     }
 
-    .filters .filters-menu ul {
-        text-align: left;
-        margin-left: 1.5rem;
-        margin-bottom: 0;
+    .filters .filters-menu .filter-category,
+    .filters .filters-menu .filter-brand {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
     }
 
-    .filters .filters-menu ul:last-child {
-        margin-bottom: 2rem;
+    .filters .filters-menu .filter-brand {
+        margin-bottom: 1rem;
     }
 
-    .filters ul li:first-child {
-        border-bottom: none;
-        width: 5rem;
+    .filters .filters-menu .filter-category label,
+    .filters .filters-menu .filter-brand label {
+        min-width: 5.5rem;
+        max-width: 5.5rem;
+        margin: .2rem;
+    }
+
+    .filters .filters-menu .filter-category span,
+    .filters .filters-menu .filter-brand span {
+        min-width: 5.5rem;
+        max-width: 5.5rem;
     }
 
     .filters .filter-buttons {

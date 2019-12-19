@@ -33,32 +33,47 @@
             <div class="filter-buttons">
                 <input class="filter-btn" type="checkbox" id="filter-btn">
                 <label class="filter-icon" for="filter-btn"><i class="class fas fa-filter"></i></label>
-                <i class="fas fa-sort-amount-up sort-btn" id="alphabet"></i>
-                <i class="fas fa-sort-alpha-down sort-btn"></i>
-                <input type="text" class="filter-search" onkeyup="itemSearch()" placeholder="Пошук...">
+                <i class="fas fa-sort-amount-up sort-btn sort-price"></i>
+                <i class="fas fa-sort-alpha-up sort-btn sort-brand"></i>
+                <input type="text" name="search" class="filter-search" placeholder="Пошук...">
             </div>
             <div class="filters-menu">
-                <ul class="filter-category">
-                    <li>Категорія:</li>
-                    <li class="filter-by" id="all">Усі</li>
-                    <li class="filter-by" id="amps">Підсилювачі</li>
-                    <li class="filter-by" id="pre-amp">Попередній підсилювач</li>
-                    <li class="filter-by" id="network-player">Програвачі</li>
-                    <li class="filter-by" id="speakers">Акустика</li>
-                    <li class="filter-by" id="projector">Проектори</li>
-                    <li class="filter-by" id="tv">Телевізори</li>
-                </ul>
-                <ul class="filter-brand">
-                    <li>Марка:</li>
-                    <li  class="filter-by" id="all">Усі</li>
-                    <li  class="filter-by" id="dan-d-agostino">Dan D'Agostino</li>
-                    <li  class="filter-by" id="loewe"> Loewe</li>
-                    <li  class="filter-by" id="wilson-audio">Wilson Audio</li>
-                    <li  class="filter-by" id="mcintosh">McIntosh</li>
-                    <li  class="filter-by" id="sonus-faber">Sonus Faber</li>
-                    <li  class="filter-by" id="dcs">dCS</li>
-                    <li  class="filter-by" id="jvc">JVC</li>
-                </ul>
+                <div class="filter-category">
+                    <span>Категорія:</span>
+                    <input type="checkbox" name="all-category" id="all-category" checked>
+                    <label for="all-category">Усі</label>
+                    <input type="checkbox" name="amps" id="amps">
+                    <label for="amps">Підсилювачі</label>
+                    <input type="checkbox" name="pre-amp" id="pre-amp">
+                    <label for="pre-amp">Попередній підсилювач</label>
+                    <input type="checkbox" name="network-player" id="network-player">
+                    <label for="network-player">Програвачі</label>
+                    <input type="checkbox" name="speakers" id="speakers">
+                    <label for="speakers">Акустика</label>
+                    <input type="checkbox" name="projector" id="projector">
+                    <label for="projector">Проектори</label>
+                    <input type="checkbox" name="tv" id="tv">
+                    <label for="tv">Телевізори</label>
+                </div>
+                <div class="filter-brand">
+                    <span>Марка:</span>
+                    <input type="checkbox" name="all-brand" id="all-brand" checked>
+                    <label for="all-brand">Усі</label>
+                    <input type="checkbox" name="dan-d-agostino" id="dan-d-agostino">
+                    <label for="dan-d-agostino">Dan D'Agostino</label>
+                    <input type="checkbox" name="loewe" id="loewe">
+                    <label for="loewe">Loewe</label>
+                    <input type="checkbox" name="wilson-audio" id="wilson-audio">
+                    <label for="wilson-audio">Wilson Audio</label>
+                    <input type="checkbox" name="sonus-faber" id="sonus-faber">
+                    <label for="sonus-faber">Sonus Faber</label>
+                    <input type="checkbox" name="mcintosh" id="mcintosh">
+                    <label for="mcintosh">McIntosh</label>
+                    <input type="checkbox" name="dcs" id="dcs">
+                    <label for="dcs">dCS</label>
+                    <input type="checkbox" name="jvc" id="jvc">
+                    <label for="jvc">JVC</label>
+                </div>
             </div>
         </section>
         <section class="products">
