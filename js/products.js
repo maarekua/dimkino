@@ -1,3 +1,88 @@
+function renderer(sort, filters) {
+  fetch('json/product-items.json')
+    .then(result => result.json())
+    .then(products => {
+      if (filters !== undefined) {
+        products = productsFilter(filters, products);
+      }
+      if (sort !== undefined) {
+        sortOptions(sort, products);
+      }
+      console.log(products)
+      clearProductList();
+      renderProducts(products);
+      addEventListeners();
+    });
+}
+
+
+document.querySelectorAll(".filter-checkbox").forEach(item => {
+    item.addEventListener('change', productsFilterEvent);
+})
+    
+let filterChoose = [];
+    
+function productsFilterEvent() {
+  const categoryAll = document.querySelector('.category-all');
+  const categoryAllData = categoryAll.dataset.filter.split(' ');
+  const brandAll = document.querySelector('.brand-all');
+  const brandAllData = brandAll.dataset.filter.split(' ');
+  const categoryBtns = document.querySelectorAll('.category');
+  const brandBtns = document.querySelectorAll('.brand');
+  if (categoryAll.checked || brandAll.checked) {
+    if (this.id === 'all-category' && this.checked) {
+      categoryBtns.forEach(item => (item.checked = false));
+    }
+    if (this.id === 'all-brand' && this.checked) {
+      brandBtns.forEach(item => (item.checked = false));
+    }
+  }
+  if (this.classList.contains('category')) {
+    categoryAll.checked = false;
+  }
+  if (this.classList.contains('brand')) {
+    brandAll.checked = false;
+  }
+  filterChoose = [];
+  if (!categoryAll.checked) {
+    categoryBtns.forEach(item => {
+      if (item.checked) {
+        filterChoose.push(item.dataset.filter);
+      } else {
+        filterChoose = filterChoose.filter(item => filterChoose.includes(item));
+      }
+    });
+  } else {
+    filterChoose = filterChoose.concat(categoryAllData);
+  }
+  if (!brandAll.checked) {
+    brandBtns.forEach(item => {
+      if (item.checked) {
+        filterChoose.push(item.dataset.filter);
+      } else {
+        filterChoose = filterChoose.filter(item => filterChoose.includes(item));
+      }
+    });
+  } else {
+    filterChoose = filterChoose.concat(brandAllData);
+  }
+ renderer(undefined, filterChoose)
+}
+
+function productsFilter(filters, products) {
+    let filtered = [];
+    products.filter(item => {
+     for (let i = 0; i < filters.length; i++){
+         for (let j = 0; j < filters.length; j++) {
+       if (item.filterCategory === filters[i] && item.filterBrand === filters[j]) {
+         filtered.push(item);
+       }
+    }
+     }
+    })
+    return filtered;
+}
+
 document.getElementById('filter-btn').addEventListener('change', function() {
   const filtersMenu = document.querySelector('.filters-menu');
   if (this.checked) {
@@ -80,19 +165,6 @@ function sortOptions(sort, products) {
       return 0;
     });
   }
-}
-
-function renderer(sort) {
-  fetch('json/product-items.json')
-    .then(result => result.json())
-    .then(products => {
-      if (sort !== undefined) {
-        sortOptions(sort, products);
-      }
-      clearProductList();
-      renderProducts(products);
-      addEventListeners();
-    });
 }
 
 const productsContainer = document.querySelector('.product-items');
@@ -249,35 +321,3 @@ function itemSearch() {
     }
   });
 }
-
-//function filterSelection(filterBy) {
-//  if (filterBy == 'all') filterBy = '';
-//  const productItems = document.getElementsByClassName('product-item');
-//  for (let i = 0; i < productItems.length; i++) {
-//    filterRemoveClass(productItems[i], "show");
-//    if (productItems[i].className.indexOf(filterBy) > -1) filterAddClass(productItems[i], "show");
-//  }
-//}
-//
-//function filterAddClass(element, name) {
-//  const itemClasses = element.className.split(' ');
-//  const showClass = name.split(' ');
-//  showClass.forEach(item => {
-//    if (itemClasses.indexOf(item) == -1) {
-//      element.className += ' ' + item;
-//    }
-//  });
-//}
-//
-//function filterRemoveClass(element, name) {
-//  const itemClasses = element.className.split(' ');
-//  const showClass = name.split(' ');
-//  for (i = 0; i < showClass.length; i++) {
-//    while (itemClasses.indexOf(showClass[i]) > -1) {
-//      itemClasses.splice(itemClasses.indexOf(showClass[i]), 1);
-//    }
-//  }
-//  element.className = itemClasses.join(' ');
-//}
-
-
