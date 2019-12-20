@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "category": "Акустика",
         "filterCategory": "speakers",
         "brand": "Wilson Audio",
@@ -9,6 +10,7 @@
         "imgName": "wilson-audio/chronosonic-xvx.jpg"
     },
     {   
+        "id": 2,
         "category": "Акустика",
         "filterCategory": "speakers",
         "brand": "Wilson Audio",
@@ -18,6 +20,7 @@
         "imgName": "wilson-audio/alexandria-xlf.jpg"
     },
     {
+        "id": 3,
         "category": "Акустика",
         "filterCategory": "speakers",
         "brand": "Wilson Audio",
@@ -27,6 +30,7 @@
         "imgName": "wilson-audio/alexx.jpg"
     },
     {
+        "id": 4,
         "category": "Акустика",
         "filterCategory": "speakers",
         "brand": "Wilson Audio",
@@ -36,6 +40,7 @@
         "imgName": "wilson-audio/alexia-series-2.jpg"
     },
     {   
+        "id": 5,
         "category": "Акустика",
         "filterCategory": "speakers",
         "brand": "Wilson Audio",
@@ -45,6 +50,7 @@
         "imgName": "wilson-audio/sasha-daw.jpg"
     },
     {
+        "id": 6,
         "category": "Акустика",
         "filterCategory": "speakers",
         "brand": "Wilson Audio",
@@ -54,6 +60,7 @@
         "imgName": "wilson-audio/yvette.jpg"
     },
     {
+        "id": 7,
         "category": "Акустика",
         "filterCategory": "speakers",
         "brand": "Wilson Audio",
@@ -63,6 +70,7 @@
         "imgName": "wilson-audio/sabrina.jpg"
     },
     {
+        "id": 8,
         "category": "Акустика",
         "filterCategory": "speakers",
         "brand": "Sonus Faber",
@@ -72,6 +80,7 @@
         "imgName": "sonus-faber/lilium.jpg"
     },
     {
+        "id": 9,
         "category": "Акустика",
         "filterCategory": "speakers",
         "brand": "Sonus Faber",
@@ -81,6 +90,7 @@
         "imgName": "sonus-faber/il-cremonese.jpg"
     },
     {
+        "id": 10,
         "category": "Акустика",
         "filterCategory": "speakers",
         "brand": "Sonus Faber",
@@ -90,6 +100,7 @@
         "imgName": "sonus-faber/amati-tradition.jpg"
     },
     {
+        "id": 11,
         "category": "Акустика",
         "filterCategory": "speakers",
         "brand": "Sonus Faber",
@@ -99,6 +110,7 @@
         "imgName": "sonus-faber/serafino-tradition.jpg"
     },
     {
+        "id": 12,
         "category": "Акустика",
         "filterCategory": "speakers",
         "brand": "Sonus Faber",
@@ -108,6 +120,7 @@
         "imgName": "sonus-faber/olympica-nova.jpg"
     },
     {
+        "id": 13,
         "category": "Акустика",
         "filterCategory": "speakers",
         "brand": "Sonus Faber",
@@ -117,6 +130,7 @@
         "imgName": "sonus-faber/sonetto-8.jpg"
     },
     {
+        "id": 14,
         "category": "Попередній підсилювач",
         "filterCategory": "pre-amp",
         "brand": "Dan d'Agostino",
@@ -126,6 +140,7 @@
         "imgName": "dan-d-agostino/progression-pre-amp.jpg"
     },
     {
+        "id": 15,
         "category": "Підсилювач",
         "filterCategory": "amps",
         "brand": "Dan d'Agostino",
@@ -135,6 +150,7 @@
         "imgName": "dan-d-agostino/progression-mono-amp.jpg"
     },
     {
+        "id": 16,
         "category": "Попередній підсилювач",
         "filterCategory": "pre-amp",
         "brand": "Dan d'Agostino",
@@ -144,6 +160,7 @@
         "imgName": "dan-d-agostino/momentum_hd_preamp.jpg"
     },
     {
+        "id": 17,
         "category": "Підсилювач",
         "filterCategory": "amps",
         "brand": "Dan d'Agostino",
@@ -153,6 +170,7 @@
         "imgName": "dan-d-agostino/momentum-m400.jpg"
     },
     {
+        "id": 18,
         "category": "Підсилювач",
         "filterCategory": "amps",
         "brand": "Dan d'Agostino",
@@ -162,6 +180,7 @@
         "imgName": "dan-d-agostino/momentum-stereo-250.jpg"
     },
     {
+        "id": 19,
         "category": "Попередній підсилювач",
         "filterCategory": "pre-amp",
         "brand": "McIntosh",
@@ -171,6 +190,7 @@
         "imgName": "mcintosh/c-1100.jpg"
     },
     {
+        "id": 20,
         "category": "Попередній підсилювач",
         "filterCategory": "pre-amp",
         "brand": "McIntosh",
@@ -180,6 +200,7 @@
         "imgName": "mcintosh/c-53.jpg"
     },
     {
+        "id": 21,
         "category": "Підсилювач",
         "filterCategory": "amps",
         "brand": "McIntosh",
@@ -189,6 +210,7 @@
         "imgName": "mcintosh/mc-125kw.jpg"
     },
     {
+        "id": 22,
         "category": "Підсилювач",
         "filterCategory": "amps",
         "brand": "McIntosh",
@@ -198,6 +220,7 @@
         "imgName": "mcintosh/mc-901.jpg"
     },
     {
+        "id": 23,
         "category": "Підсилювач",
         "filterCategory": "amps",
         "brand": "McIntosh",
@@ -207,6 +230,7 @@
         "imgName": "mcintosh/mc-2301.jpg"
     },
     {
+        "id": 24,
         "category": "Підсилювач",
         "filterCategory": "amps",
         "brand": "McIntosh",
@@ -216,6 +240,7 @@
         "imgName": "mcintosh/mc-255.jpg"
     },
     {
+        "id": 25,
         "category": "Мережевий плеєр",
         "filterCategory": "network-player",
         "brand": "dCS",
@@ -225,6 +250,7 @@
         "imgName": "dcs/vivaldi-dac.jpg"
     },
     {
+        "id": 26,
         "category": "Мережевий плеєр",
         "filterCategory": "network-player",
         "brand": "dCS",
@@ -234,6 +260,7 @@
         "imgName": "dcs/rossini-dac.jpg"
     },
     {
+        "id": 27,
         "category": "Мережевий плеєр",
         "filterCategory": "network-player",
         "brand": "dCS",
@@ -243,6 +270,7 @@
         "imgName": "dcs/bartok-dac.jpg"
     },
     {
+        "id": 28,
         "category": "Телевізор",
         "filterCategory": "tv",
         "brand": "Loewe",
@@ -252,6 +280,7 @@
         "imgName": "loewe/bild-7-77.jpg"
     },
     {
+        "id": 29,
         "category": "Телевізор",
         "filterCategory": "tv",
         "brand": "Loewe",
@@ -261,6 +290,7 @@
         "imgName": "loewe/bild-5-55.jpg"
     },
     {
+        "id": 30,
         "category": "Телевізор",
         "filterCategory": "tv",
         "brand": "Loewe",
@@ -270,6 +300,7 @@
         "imgName": "loewe/bild-3-55.jpg"
     },
     {
+        "id": 31,
         "category": "Проектор",
         "filterCategory": "projector",
         "brand": "JVC",
@@ -279,6 +310,7 @@
         "imgName": "jvc/dla-rs-3000.jpg"
     },
     {
+        "id": 32,
         "category": "Проектор",
         "filterCategory": "projector",
         "brand": "JVC",
@@ -288,6 +320,7 @@
         "imgName": "jvc/dla-rs-1000-2000.jpg"
     },
     {
+        "id": 33,
         "category": "Проектор",
         "filterCategory": "projector",
         "brand": "JVC",
@@ -297,6 +330,7 @@
         "imgName": "jvc/dla-rs-1000-2000.jpg"
     },
     {
+        "id": 34,
         "category": "Проектор",
         "filterCategory": "projector",
         "brand": "JVC",

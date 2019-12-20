@@ -183,7 +183,7 @@ function renderProducts(products) {
   let productRowContents = '';
   products.forEach(product => {
     productRowContents += `
-                  <div class="product-item" data-filter="${product.category} ${product.brand} ${product.model}" data-price="${product.price}">
+                  <div class="product-item" data-filter="${product.category} ${product.brand} ${product.model}" data-price="${product.price}" data-id=${product.id}>
                     <div class="product-img-container">
                         <img class="product-img" src="images/products/${product.imgName}" alt="${product.category} - ${product.brand} - ${product.model}">
                     </div>
