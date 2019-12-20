@@ -337,8 +337,8 @@ function itemSearch() {
   searchText = searchInput.value.toUpperCase();
   const productItem = document.querySelectorAll('.product-item');
   productItem.forEach(item => {
-    const productModel = item.getAttribute('data-model');
-    const productBrand = item.getAttribute('data-brand');
+    const productModel = item.querySelector('.product-model').innerText;
+    const productBrand = item.querySelector('.product-brand').innerText;
     const productSearch = productBrand + ' ' + productModel;
     if (productSearch.toUpperCase().indexOf(searchText) > -1) {
       item.classList.remove('hide');
