@@ -317,7 +317,7 @@
 }
 
 .cart .cart-items .cart-row .cart-item-remove:hover {
-    color: var(--orange-color);
+    color: var(--event-color);
 }
 
 .cart .cart-total {
@@ -358,7 +358,7 @@
 }
 
 .cart .btn:hover {
-    background-color: var(--orange-color);
+    background-color: var(--event-color);
     color: var(--text-color);
     border: none;
 }

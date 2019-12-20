@@ -8,7 +8,6 @@ function renderer(sort, filters) {
       if (sort !== undefined) {
         sortOptions(sort, products);
       }
-      console.log(products)
       clearProductList();
       renderProducts(products);
       addEventListeners();
@@ -212,6 +211,17 @@ document
   .addEventListener('click', purchaseComplete);
 
 function purchaseComplete() {
+  saveCart();
+  console.log(localStorage)
+  fetch('order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          localStorage
+        })
+    });
   alert('Дякуємо за покупку в нашому магазині!');
   const cartItems = document.querySelector('.cart-items');
   while (cartItems.hasChildNodes()) {
@@ -247,17 +257,19 @@ function addToCart(event) {
     .innerText;
   const productPrice = productItem.getElementsByClassName('product-price')[0]
     .innerText;
+  const productId = productItem.dataset.id;
   addProductToCart(
     productImageSrc,
     productImageAlt,
     productBrand,
     productModel,
-    productPrice
+    productPrice,
+    productId
   );
   updateCartTotal();
 }
 
-function addProductToCart(imageSrc, imageAlt, brand, model, price) {
+function addProductToCart(imageSrc, imageAlt, brand, model, price, id) {
   const cartRow = document.createElement('div');
   cartRow.classList.add('cart-row');
   const cartItems = document.querySelector('.cart-items');
@@ -269,7 +281,7 @@ function addProductToCart(imageSrc, imageAlt, brand, model, price) {
     }
   }
   const cartRowContents = `
-        <div class="cart-item cart-column">
+        <div class="cart-item cart-column" data-id="${id}">
             <img class="cart-item-image" src="${imageSrc}" alt="${imageAlt}" width="100" height="100">
             <div class="cart-item-descr">
                 <p class="cart-item-brand">${brand}</p>
@@ -289,6 +301,20 @@ function addProductToCart(imageSrc, imageAlt, brand, model, price) {
   cartRow
     .querySelector('.cart-quantity-input')
     .addEventListener('change', quantityChanged);
+}
+
+function saveCart() {
+    const productIds = []
+    const quantityValue = []
+    document.querySelectorAll('.cart-item')
+      .forEach((item, index) => {
+          productIds.push(item.dataset.id);
+          const input = document.querySelectorAll('.cart-quantity-input')[index];
+          quantityValue.push(input.value);
+        })
+    const quantityResult = quantityValue.join();
+    const idsResult = productIds.join();
+    localStorage['cart'] = idsResult + " quantity: " + quantityResult;
 }
 
 function updateCartTotal() {
