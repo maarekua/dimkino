@@ -35,3 +35,21 @@ const owl = $('.owl-carousel');
         }
     }
 });
+
+//document.querySelector('button')
+//    .addEventListener('click', contactSubmit)
+//
+//function contactSubmit () {
+//fetch('contact', {
+//        method: 'POST',
+//        headers: {
+//          'Content-Type': 'application/json'
+//        },
+//        body: JSON.stringify({
+//          clientName: document.querySelector('.contact-name').value,
+//          clientTel: document.querySelector('.contact-tel').value,
+//          clientMail: document.querySelector('.contact-email').value,
+//          clientComment: document.querySelector('.contact-comment').value,
+//        })
+//    });
+//}

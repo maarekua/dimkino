@@ -1,0 +1,2 @@
+{"localStorage":{"cart":"3,6,14 quantity: 1,2,1"}}
+{"localStorage":{"cart":"2,7,10 quantity: 1,3,1"}}
